@@ -16,6 +16,7 @@ public class HomeController {
 
     @RequestMapping(path = "/")
     public String getHomePage(){
+        //test
         return "index.jsp";
     }
 }
