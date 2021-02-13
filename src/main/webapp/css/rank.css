@@ -12,71 +12,51 @@ a{
     text-decoration: none;
 }
 .main{
-	width:1200px;
-	height: 1000px;
-	margin:100px auto;
-	position: relative;
+    width:1200px;
+    height: 1000px;
+    margin:100px auto;
+    position: relative;
 }
 .u{
-	float:right;
+    float:right;
 }
 .toppest{
-	background-color: black;
+    background-color: black;
 }
 .toppest a{
-	list-style: none;
-	width: 100px;
-	height: 30px;
-	text-align: center;
-	/*当行高等于父容器高度的时候，文字垂直方向居中*/
-	line-height: 30px;
-	color: white;
-	
+    list-style: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    /*当行高等于父容器高度的时候，文字垂直方向居中*/
+    line-height: 30px;
+    color: white;
+
 }
 .toppest a:hover{
-	color: white;
-	font-weight: bold;
-	background: #6A5ACD;
-}			
+    color: white;
+    font-weight: bold;
+    background: #6A5ACD;
+}
 
 .btns{
-	/*border: black solid 1px;*/
-	background-color: black;
-	float: right;
-	/*列表的点去掉*/
-	list-style: none;
-	width: 100px;
-	height: 30px;
-	text-align: center;
-	/*当行高等于父容器高度的时候，文字垂直方向居中*/
-	line-height: 30px;
-	color: white;
+    /*border: black solid 1px;*/
+    background-color: black;
+    float: right;
+    /*列表的点去掉*/
+    list-style: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    /*当行高等于父容器高度的时候，文字垂直方向居中*/
+    line-height: 30px;
+    color: white;
 }
-			/*当鼠标放上去，改变btn的颜色*/
+/*当鼠标放上去，改变btn的颜色*/
 .btns:hover{
-	color: white;
-	font-weight: bold;
-	background: #6A5ACD;
-}			
-
-.container{
-    margin: 50px auto;
-    border-top: 5px solid limegreen;
-    border-right: 3px solid limegreen;
-    border-bottom: 3px solid limegreen;
-    border-left: 5px solid limegreen;
-    width: 1000px;
-    height: 390px;
-}
-
-.displayer{
-    margin: 50px auto;
-    border-top: 5px solid limegreen;
-    border-right: 3px solid limegreen;
-    border-bottom: 3px solid limegreen;
-    border-left: 5px solid limegreen;
-    width: 1000px;
-    height: 900px;
+    color: white;
+    font-weight: bold;
+    background: #6A5ACD;
 }
 
 .ranker{
@@ -85,8 +65,8 @@ a{
     border-right: 3px solid 	black;
     border-bottom: 3px solid 	black;
     border-left: 5px solid 	black;
-    width: 1200px;
-    height: 340px;
+    width: 1209px;
+    height: 349px;
 }
 .rankhead{
     float: left;
@@ -102,7 +82,7 @@ a{
 .rankcontent{
     box-sizing: border-box;
     width: 1000px;
-    height: 1000px;
+    height: 340px;
     float: left;
 }
 .rankcontent-li{
@@ -111,13 +91,13 @@ a{
 }
 .rankcontent-li button{
     background-color: black;
-	float: right;
-	list-style: none;
-	width: 100px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	color: white;
+    float: right;
+    list-style: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
 }
 .rankcontent-li img{
     position: absolute;
@@ -130,35 +110,84 @@ a{
 .rankcontent-li img:hover{
     transform:translateX(10px);
     transition: all .5s ease;
-    
+
 }
 
 .rankcontent ul li{
     box-sizing: border-box;
     float: left;
     width: 200px;
-    height: 340px; 
+    height: 340px;
 }
 
-.left{
-    float: left;
+
+.consigner{
+    margin: 50px auto;
+    border-top: 5px solid 	black;
+    border-right: 3px solid 	black;
+    border-bottom: 3px solid 	black;
+    border-left: 5px solid 	black;
+    width: 1209px;
+    height: 349px;
+}
+.consignhead{
+    float: right;
     position: relative;
     box-sizing: border-box;
-    width: 400px;
-    height: 300px;
-    border-right: 1px dashed #ddd;
+    width: 200px;
+    height: 200px;
+    border-right: 1px  #ddd;
+}
+.consignhead .wrap{
+    padding: 30px;
+}
+.consigncontent{
+    box-sizing: border-box;
+    width: 1000px;
+    height: 340px;
+    float: left;
+}
+.consigncontent-li{
+    padding: 10px;
+    position: relative;
+}
+.consigncontent-li button{
+    background-color: black;
+    float: right;
+    list-style: none;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+.consigncontent-li img{
+    position: absolute;
+    top:90px;
+    right: 17px;
+    width: 180px;
+    height: 240px;
+}
+
+.consigncontent-li img:hover{
+    transform:translateX(10px);
+    transition: all .5s ease;
+
+}
+
+.consigncontent ul li{
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    height: 340px;
 }
 
 
-.left .wrap{
-    padding: 40px;
-}
-
- h3{
+h3{
     font-size: 26px;
     padding-bottom: 20px;
 }
- .a-wrap{
+.a-wrap{
     background: red;
     width: 110px;
     height: 38px;
@@ -169,39 +198,161 @@ a{
     margin-bottom: 20px;
 
 }
-.left-wrap a {
-    color:rgb(26, 26, 25);
-    padding-bottom: 20px;
-    
+.displayer{
+    margin: 50px auto;
+    border-top: 5px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 5px solid black;
+    width: 1209px;
+    height: 909px;
 }
-
-.left img{
-    position: absolute;
-    top:10px;
-    right: 30px;
-    width: 50%;
-    /* width: 200px;
-    height: 200px; */
-}
-
-.right{
+.displayhead{
+    float: left;
+    position: relative;
     box-sizing: border-box;
-    width: 600px;
+    width: 200px;
     height: 200px;
+    border-right: 1px  #ddd;
+}
+.displayhead .wrap{
+    padding: 30px;
+}
+.displaycontent{
+    box-sizing: border-box;
+    width: 1000px;
+    height: 680px;
     float: left;
 }
+.displaycontent ul li{
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    height: 180px;
+}
+.displaycontent-li{
+    padding: 10px;
+    position: relative;
+}
+.displaycontent-li .a-wrap{
+    width: 60px;
+    height: 23px;
+    background-color: #000000;
+    line-height: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 10px;
+    font-size:small;
+}
+.displaycontent-li img{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 120px;
+    height: 160px;
+}
+.displaycontent-li img:hover{
+    transform:translateX(10px);
+    transition: all .5s ease;
+
+}
+
+
+
+
+.shower{
+    margin: 50px auto;
+    border-top: 5px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 5px solid black;
+    width: 1209px;
+    height: 909px;
+}
+.showhead{
+    float:right;
+    position: relative;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    border-right: 1px  #ddd;
+}
+.showhead .wrap{
+    padding: 30px;
+}
+.showcontent{
+    box-sizing: border-box;
+    width: 1000px;
+    height: 680px;
+    float: left;
+}
+.showcontent ul li{
+    box-sizing: border-box;
+    float: left;
+    width: 200px;
+    height: 180px;
+}
+.showcontent-li{
+    padding: 10px;
+    position: relative;
+}
+.showcontent-li .a-wrap{
+    width: 60px;
+    height: 23px;
+    background-color: #000000;
+    line-height: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 10px;
+    font-size:small;
+}
+.showcontent-li img{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 120px;
+    height: 160px;
+}
+.showcontent-li img:hover{
+    transform:translateX(10px);
+    transition: all .5s ease;
+
+}
+
+
+
 
 ul li{
     box-sizing: border-box;
     float: left;
     width: 200px;
-    height: 150px; 
+    height: 150px;
 }
 ul li:nth-child(1),
 ul li:nth-child(2),
 ul li:nth-child(3),
 ul li:nth-child(4),
-ul li:nth-child(5){
+ul li:nth-child(5),
+ul li:nth-child(6),
+ul li:nth-child(7),
+ul li:nth-child(8),
+ul li:nth-child(9),
+ul li:nth-child(10),
+ul li:nth-child(11),
+ul li:nth-child(12),
+ul li:nth-child(13),
+ul li:nth-child(14),
+ul li:nth-child(15),
+ul li:nth-child(16),
+ul li:nth-child(17),
+ul li:nth-child(18),
+ul li:nth-child(19),
+ul li:nth-child(20),
+ul li:nth-child(21),
+ul li:nth-child(22),
+ul li:nth-child(23),
+ul li:nth-child(24),
+ul li:nth-child(25){
     border-bottom: 1px dashed #ddd;
     border-top: 1px dashed #ddd;
 }
@@ -209,96 +360,26 @@ ul li:nth-child(1),
 ul li:nth-child(2),
 ul li:nth-child(3),
 ul li:nth-child(4),
-ul li:nth-child(5){
+ul li:nth-child(5),
+ul li:nth-child(6),
+ul li:nth-child(7),
+ul li:nth-child(8),
+ul li:nth-child(9),
+ul li:nth-child(10),
+ul li:nth-child(11),
+ul li:nth-child(12),
+ul li:nth-child(13),
+ul li:nth-child(14),
+ul li:nth-child(15),
+ul li:nth-child(16),
+ul li:nth-child(17),
+ul li:nth-child(18),
+ul li:nth-child(19),
+ul li:nth-child(20),
+ul li:nth-child(21),
+ul li:nth-child(22),
+ul li:nth-child(23),
+ul li:nth-child(24),
+ul li:nth-child(25){
     border-right: 1px dashed #ddd;
-}
-
-.right-li{
-    padding: 20px;
-    position: relative;
-}
-
-.right-li img{
-    position: absolute;
-    top:15px;
-    right: 17px;
-    width: 100px;
-    height: 100px;
-}
-
-.right-li img:hover{
-    transform:translateX(10px);
-    transition: all .5s ease;
-    
-}
-
-.right .a-wrap{
-    width: 50px;
-    height: 20px;
-    line-height: 20px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.top{
-    float:initial;
-    position: relative;
-    box-sizing: border-box;
-    width: 1000px;
-    height: 300px;
-    border-right: 1px dashed #ddd;
-    padding-left: 47px;
-    padding-top: 47px;
-}
-
-.top .wrap{
-	 padding: 40px;
-}
-
-.top img{
-	position: absolute;
-    top:870px;
-    right: 200px;
-    width: 700px;
-    height: 260px;
-}
-
-.bottom{
-    box-sizing: border-box;
-    width: 1000px;
-    height: 1000px;
-    float: left;
-}
-
-.bottom-li{
-    padding: 20px;
-    position: relative;
-}
-.bottom-img{
-    position: absolute;
-    top:25px;
-    right: 17px;
-    width: 100px;
-    height: 100px;
-}
-.bottom-li img{
-    position: absolute;
-    top:25px;
-    right: 17px;
-    width: 100px;
-    height: 100px;
-}
-.bottom-li img:hover{
-    transform:translateX(10px);
-    transition: all .5s ease;
-    
-}
-.bottom .a-wrap{
-    width: 50px;
-    height: 20px;
-    line-height: 20px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-bottom: 10px;
 }
