@@ -15,7 +15,7 @@
 
 <div class="main">
     <ul>
-        <li class="btns">用户</li>
+        <a href="selfpage.jsp"><li class="btns">用户</li></a>
         <a href="index.jsp">  <li class="btns">首页</li>  </a>
         <li class="btns">记录</li>
         <li class="btns">搜索<input id="ss" class="easyui-searchbox" style="width:200px"
@@ -392,8 +392,8 @@
                 <input class="easyui-textbox" id="basal_register_username" name="register_username" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-man',prompt:'请输入昵称'" style="width:100%;height:30px;padding:12px"/>
             </div>
             <div style="padding: 10px;">
-                模特<input type="radio" name="usertype" value="模特" checked="checked"/>
-                委托人<input type="radio" name="usertype" value="委托人"/>
+                模特<input type="radio" name="userType" value=0 checked="checked"/>
+                委托人<input type="radio" name="userType" value=1 />
             </div>
             <div style="padding: 10px;">
                 <input class="easyui-textbox" id="register_password1" name="register_password1" data-options="type:'password',required:true,validType:'password',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-lock',prompt:'请输入密码'" style="width:100%;height:30px;padding:12px"/>
@@ -422,21 +422,21 @@
     <div data-options="region:'center'" style="padding:10px;">
         <form id="login_form" method="post">
             <div style="padding: 10px;">
-                <input class="easyui-textbox" id="login_phone" name="login_phone" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone',prompt:'请输入账号（注册时使用的电话号码）'" style="width:100%;height:30px;padding:12px"/>
+                <input class="easyui-textbox" id="loginphone" name="loginphone" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone',prompt:'请输入账号（注册时使用的电话号码）'" style="width:100%;height:30px;padding:12px"/>
             </div>
             <div style="padding: 10px;">
-                模特<input type="radio" name="usertype" value="模特" checked="checked"/>
-                委托人<input type="radio" name="usertype" value="委托人"/>
+                模特<input type="radio" name="usertype" value=0 checked="checked"/>
+                委托人<input type="radio" name="usertype" value=1 />
             </div>
             <div style="padding: 10px;">
-                <input class="easyui-textbox" id="login_password" name="login_password" data-options="type:'password',required:true,validType:'password',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-lock',prompt:'请输入密码'" style="width:100%;height:30px;padding:12px"/>
+                <input class="easyui-textbox" id="loginpassword" name="loginpassword" data-options="type:'password',required:true,validType:'password',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-lock',prompt:'请输入密码'" style="width:100%;height:30px;padding:12px"/>
             </div>
 
 
         </form>
     </div>
     <div data-options="region:'south',border:false" style="text-align:center;padding:5px 0 0;">
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="loginUser()" style="width:80px">登录</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="attemptLogin()" style="width:80px">登录</a>
         <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#login_dialog_id').dialog('close')" style="width:80px">取消</a>
     </div>
 </div>
