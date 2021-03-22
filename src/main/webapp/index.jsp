@@ -6,11 +6,11 @@
     <title>Model Work Checker</title>
     <link rel="stylesheet" href="css/rank.css" />
     <script type="text/javascript" src="js/loginAndRegister.js"></script>
-    <script type="text/javascript" src="js/book.js"></script>
+    <script type="text/javascript" src="js/reserve.js"></script>
     <script type="text/javascript" src="js/guide.js"></script>
 </head>
 <body>
-<div class="toppest"> <a onclick="openRegisterWindow()"> 注册</a>  <a> |</a>  <a onclick="openLoginWindow()">登录</a>  <a style="float: right;">联系我们</a></div>
+<div class="toppest"> <a onclick="openRegisterWindow()"> 注册</a>  <a> |</a>  <a onclick="openLoginWindow()">登录</a>  <a onclick="openContactWindow()" style="float: right;">联系我们</a></div>
 
 
 <div class="main">
@@ -40,34 +40,34 @@
         <div class="rankcontent">
             <ul>
                 <li class="rankcontent-li">
-                    <button onclick="openBookWindow()">工作预约</button>
+                    <button onclick="openReserveWindow()">工作预约</button>
                     <h3 style="color:#4169E1;">1</h3>
                     <h4>银耳</h4>
                     <img src="img/Krispy.jpg" alt="银耳">
                 </li>
                 <li class="rankcontent-li">
-                    <button onclick="openBookWindow()">工作预约</button>
+                    <button onclick="openReserveWindow()">工作预约</button>
                     <h3 style="color:#6A5ACD;">2</h3>
                     <h4>纯子</h4>
 
                     <img src="img/Junko.JPG" alt="纯子">
                 </li>
                 <li class="rankcontent-li">
-                    <button onclick="openBookWindow()">工作预约</button>
+                    <button onclick="openReserveWindow()">工作预约</button>
                     <h3 style="color:#4682B4;">3</h3>
                     <h4>七七蟹</h4>
 
                     <img src="img/Kim.jpg" alt="七七蟹">
                 </li>
                 <li class="rankcontent-li">
-                    <button onclick="openBookWindow()">工作预约</button>
+                    <button onclick="openReserveWindow()">工作预约</button>
                     <h3 style="color:	#7B68EE;">4</h3>
                     <h4>霞影</h4>
 
                     <img src="img/Shia.jpg" alt="霞影">
                 </li>
                 <li class="rankcontent-li">
-                    <button onclick="openBookWindow()">工作预约</button>
+                    <button onclick="openReserveWindow()">工作预约</button>
                     <h3 style="color:	#9370D8;">5</h3>
                     <h4>山丘上的石头</h4>
 
@@ -144,7 +144,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -153,7 +153,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -162,7 +162,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -171,7 +171,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -180,7 +180,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -189,7 +189,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -198,7 +198,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -207,7 +207,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -216,7 +216,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -225,7 +225,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -234,7 +234,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -243,7 +243,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -252,7 +252,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -261,7 +261,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -270,7 +270,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -279,7 +279,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -288,7 +288,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -297,7 +297,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -306,7 +306,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -315,7 +315,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -324,7 +324,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -333,7 +333,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -342,7 +342,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -351,7 +351,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -360,7 +360,7 @@
                     <h4>韩世莹</h4>
                     <br/>
                     <div class="a-wrap">
-                        <a onclick="openBookWindow()" style="color: #FFFFFF;" >工作预约</a>
+                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>
@@ -416,6 +416,15 @@
     </div>
 </div>
 
+<%--contact us--%>
+<div class="easyui-dialog" title="联系我们" id="contact_us_dialog_id" style="width:350px;height:100px;padding:10px" data-options="closed:true, modal: true">
+    <div data-options="region:'center'" style="padding:10px;">
+        客服电话：15208331018
+    </div>
+
+</div>
+
+
 
 <%--login--%>
 <div class="easyui-dialog" title="登录" id="login_dialog_id" style="width:350px;height:400px;padding:10px" data-options="closed:true, modal: true">
@@ -442,10 +451,10 @@
 </div>
 
 
-<%--booking--%>
-<div class="easyui-dialog" title="工作预约" id="book_dialog_id" style="width:350px;height:400px;padding:10px" data-options="closed:true, modal: true">
+<%--reserve--%>
+<div class="easyui-dialog" title="工作预约" id="reserve_dialog_id" style="width:350px;height:400px;padding:10px" data-options="closed:true, modal: true">
     <div data-options="region:'center'" style="padding:10px;">
-        <form id="book_form" method="post">
+        <form id="reserve_form" method="post">
 
 
             <div style="padding: 10px;">
@@ -453,13 +462,13 @@
             </div>
 
             <div style="padding: 10px;">
-                <input class="easyui-textbox" id="book_phone" name="book_phone" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone',prompt:'请输入您的联系方式'" style="width:100%;height:30px;padding:12px"/>
+                <input class="easyui-textbox" id="reserve_phone" name="reserve_phone" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone',prompt:'请输入您的联系方式'" style="width:100%;height:30px;padding:12px"/>
             </div>
 
             <div style="padding: 10px;">
                 <div>
-                  预约时间<input class="easyui-datetimebox"  id="book_time" name="booktime"
-                       data-options="required:true,showSeconds:false" value="3/4/2021 2:3" style="width:150px">
+                  预约时间<input class="easyui-datetimebox"  id="reserve_time" name="reserve_time"
+                       data-options="required:true,showSeconds:false" value="3/4/2021 0:0" style="width:150px">
                 </div>
             </div>
             <div style="padding: 10px;">
@@ -469,8 +478,8 @@
         </form>
     </div>
     <div data-options="region:'south',border:false" style="text-align:center;padding:5px 0 0;">
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="loginUser()" style="width:80px">发送</a>
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#login_dialog_id').dialog('close')" style="width:80px">取消</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="insertReservation()" style="width:80px">发送</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#reserve_dialog_id').dialog('close')" style="width:80px">取消</a>
     </div>
 </div>
 
