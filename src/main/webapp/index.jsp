@@ -468,7 +468,7 @@
             <div style="padding: 10px;">
                 <div>
                   预约时间<input class="easyui-datetimebox"  id="reserve_time" name="reserve_time"
-                       data-options="required:true,showSeconds:false" value="3/4/2021 0:0" style="width:150px">
+                       data-options="required:true,showSeconds:false" style="width:150px">
                 </div>
             </div>
             <div style="padding: 10px;">

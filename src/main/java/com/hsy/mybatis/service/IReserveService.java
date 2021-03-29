@@ -1,10 +1,10 @@
 package com.hsy.mybatis.service;
 
 
-import java.sql.Date;
+import java.util.Date;
 
 public interface IReserveService {
 
-    void insertReservation(String theme,String contact,Date time,String content);
+    void insertReservation(String theme, String contact, Date time, String content);
 
 }

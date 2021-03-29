@@ -6,7 +6,7 @@ function insertReservation(){
 
     var theme = $("#work_theme").textbox('getValue');
     var contact = $("#reserve_phone").textbox('getValue');
-    var time = $("#reserve_time").textbox('getValue');
+    var time = $("#reserve_time").datebox('getValue');
     var content = $("#work_content").textbox('getValue');
 
     $("#reserve_form").form("submit",{

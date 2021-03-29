@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 @RestController
 public class ReserveController {
@@ -16,10 +19,13 @@ public class ReserveController {
     private IReserveService reserveService;
 
     @RequestMapping("/reserve_{theme}_{contact}_{time}_{content}")
-    public String sendReservation(@PathVariable String theme,@PathVariable String contact,
-                                   @PathVariable Date time,@PathVariable String content){
+    public String sendReservation(@PathVariable String theme, @PathVariable String contact,
+                                  @PathVariable String time, @PathVariable String content) throws ParseException {
 
-        reserveService.insertReservation(theme,contact,time,content);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Date reserveDate = sdf.parse(time);
+
+        reserveService.insertReservation(theme,contact,reserveDate,content);
 
         return "success";
 
