@@ -15,4 +15,5 @@ public interface ILoginAndRegisterMapper {
 
     @Select("select * from user where account = #{account}")
     UserEntity isExisted(String account);
+
 }

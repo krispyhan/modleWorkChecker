@@ -10,14 +10,15 @@
     <script type="text/javascript" src="js/guide.js"></script>
 </head>
 <body>
-<div class="toppest"> <a onclick="openRegisterWindow()"> 注册</a>  <a> |</a>  <a onclick="openLoginWindow()">登录</a>  <a onclick="openContactWindow()" style="float: right;">联系我们</a></div>
-
+<div class="toppest"> <a onclick="openRegisterWindow()" id="register_button_id"> 注册</a>  <a id="index_nickname_id"> |</a>  <a onclick="openLoginWindow()" id="login_button_id">登录</a>  <a onclick="openContactWindow()" style="float: right;">联系我们</a></div>
 
 <div class="main">
     <ul>
-        <a href="selfpage.jsp"><li class="btns">用户</li></a>
+ <%--       <a href="error.jsp"><li class="btns">error</li></a>--%>
+        <a href="centre.jsp"><li class="btns">个人中心</li></a>
+<%--        <a href="selfpage.jsp"><li class="btns">用户</li></a>--%>
         <a href="index.jsp">  <li class="btns">首页</li>  </a>
-        <li class="btns">记录</li>
+        <a onclick="openRecordWindow()"><li class="btns">记录</li></a>
         <li class="btns">搜索<input id="ss" class="easyui-searchbox" style="width:200px"
                                   data-options="searcher:qq,prompt:'搜索内容···',menu:'#mm'"></input>
             <div id="mm" style="width:120px">
@@ -466,13 +467,21 @@
             </div>
 
             <div style="padding: 10px;">
+                <input class="easyui-textbox" id="initiative_nickname" name="initiative_nickname" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-man',prompt:'请输入您的昵称'" style="width:100%;height:30px;padding:12px"/>
+            </div>
+
+            <div style="padding: 10px;">
+                <input class="easyui-textbox" id="passive_nickname" name="passive_nickname" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-man',prompt:'请输入您选择的合作方的昵称'" style="width:100%;height:30px;padding:12px"/>
+            </div>
+
+            <div style="padding: 10px;">
                 <div>
                   预约时间<input class="easyui-datetimebox"  id="reserve_time" name="reserve_time"
                        data-options="required:true,showSeconds:false" style="width:150px">
                 </div>
             </div>
             <div style="padding: 10px;">
-                <input class="easyui-textbox" id="work_content" name="work_content" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-info',prompt:'请输入工作详情'" style="width:100%;height:80px;padding:10px"/>
+                <input class="easyui-textbox" id="work_content" name="work_content" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-pencil',prompt:'请输入工作详情'" style="width:100%;height:80px;padding:10px"/>
             </div>
 
         </form>
@@ -482,8 +491,5 @@
         <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#reserve_dialog_id').dialog('close')" style="width:80px">取消</a>
     </div>
 </div>
-
-
-
 </body>
 </html>

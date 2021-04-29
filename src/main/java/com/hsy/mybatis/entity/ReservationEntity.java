@@ -7,6 +7,8 @@ import java.util.Date;
 
 public class ReservationEntity {
 
+    private int id;
+
     private String theme;
 
     private String contact;
@@ -14,6 +16,44 @@ public class ReservationEntity {
     private Date time;
 
     private String content;
+
+    private String passive;
+
+    private String initiative;
+
+    private int status;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getPassive() {
+        return passive;
+    }
+
+    public void setPassive(String passive) {
+        this.passive = passive;
+    }
+
+    public String getInitiative() {
+        return initiative;
+    }
+
+    public void setInitiative(String initiative) {
+        this.initiative = initiative;
+    }
 
     public String getTheme() {
         return theme;
