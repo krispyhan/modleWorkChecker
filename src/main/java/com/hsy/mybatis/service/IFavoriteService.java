@@ -7,6 +7,8 @@ import java.util.List;
 public interface IFavoriteService {
 
     void insertFavorite(String favorite,String operator);
+    
+    void cancelFavorite(int id);
 
     List<MyFavoriteItem> getMyFavoriteByNickName(String operatorNickname);
 }

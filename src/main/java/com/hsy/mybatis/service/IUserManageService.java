@@ -1,6 +1,5 @@
 package com.hsy.mybatis.service;
 
-import com.hsy.mybatis.bean.UserInfoBean;
 import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.entity.UserInfoEntity;
 

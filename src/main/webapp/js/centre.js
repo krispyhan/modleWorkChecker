@@ -130,7 +130,6 @@ function loadMyReserveTable() {
     $("#myReserve_table").datagrid(MyReserveListDataOptions);
 }
 
-
 function loadMyReservationTable() {
     var initiative = $("#centre_nickname_id").text().trim();
 
@@ -258,6 +257,10 @@ function loadMyFavoriteTable() {
             {field:"operateDate",title:"收藏时间",width:40,align:"center"},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
 
+                    return "<a href='#' onclick='cancelFavorite(this)' data-id='"
+                        + row.id
+                        + "' >取消收藏</a>";
+
                 }
             }
         ]],
@@ -272,4 +275,15 @@ function loadMyFavoriteTable() {
     };
 
     $("#myFavorite_table").datagrid(MyFavoriteListDataOptions);
+}
+function cancelFavorite(pram) {
+    var id = $(pram).attr("data-id");
+    $.post("favorite/cancelFavorite_" + id ,{},function (res) {
+        if(res.state == 0){
+            $.messager.alert("温馨提示",res.message);
+            loadMyFavoriteTable();
+        }else {
+            $.messager.alert("温馨提示","操作失败，请重试!");
+        }
+    });
 }

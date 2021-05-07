@@ -2,7 +2,6 @@ package com.hsy.mybatis.controller;
 
 import com.hsy.mybatis.bean.DataGridResult;
 import com.hsy.mybatis.bean.MyFavoriteItem;
-import com.hsy.mybatis.bean.MyReserveItem;
 import com.hsy.mybatis.service.IFavoriteService;
 import com.hsy.mybatis.util.WebJsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +22,12 @@ public class FavoriteController {
     public String addFavorite(@PathVariable String favorite,@PathVariable String operator){
         favoriteService.insertFavorite(favorite,operator);
         return "success";
+    }
+
+    @RequestMapping("/cancelFavorite_{id}")
+    public WebJsonResult cancelFavorite(@PathVariable int id){
+        favoriteService.cancelFavorite(id);
+        return WebJsonResult.newSuccess("收藏取消成功!");
     }
 
     @RequestMapping("/getMyFavorites_{operatorNickname}")

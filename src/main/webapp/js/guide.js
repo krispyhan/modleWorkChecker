@@ -37,9 +37,6 @@ function qq(value,name){
 function openContactWindow() {
     $("#contact_us_dialog_id").dialog('open');
 }
-function openFavoriteWindow() {
-    $("#favorite_dialog_id").dialog('open');
-}
 
 function addFavorite(pram){
     var favorite = $(pram).attr("data-value");
@@ -53,7 +50,6 @@ function addFavorite(pram){
         success : function (res) {
             if(res == "success"){
                 location.href = "index.jsp";
-                // $("#favorite_dialog_id").dialog('close');
                 $("#index_nickname_id").text(res);
                 $.messager.alert("温馨提示","收藏成功！");
             }else{

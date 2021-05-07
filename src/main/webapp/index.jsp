@@ -393,8 +393,11 @@
                 <li class="displaycontent-li">
                     <h4>韩世莹</h4>
                     <br/>
-                    <div class="a-wrap">
-                        <a onclick="openReserveWindow()" style="color: #FFFFFF;" >工作预约</a>
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                        <a style="color: #FFFFFF;" >收藏</a>
+                    </div>
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                        <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Krispy.jpg" alt="">
                 </li>

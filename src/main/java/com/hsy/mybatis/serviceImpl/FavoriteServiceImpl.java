@@ -20,9 +20,6 @@ public class FavoriteServiceImpl implements IFavoriteService {
     @Autowired(required = false)
     private IFavoriteMapper favoriteMapper;
 
-    @Autowired(required = false)
-    private IUserMapper userMapper;
-
     @Override
     public void insertFavorite(String favorite, String operator) {
         SimpleDateFormat sdf = new SimpleDateFormat();
@@ -35,6 +32,11 @@ public class FavoriteServiceImpl implements IFavoriteService {
     }
 
     @Override
+    public void cancelFavorite(int id) {
+        favoriteMapper.cancelFavorite(id);
+    }
+
+    @Override
     public List<MyFavoriteItem> getMyFavoriteByNickName(String operatorNickname) {
         List<MyFavoriteItem> results = new ArrayList<>();
         List<FavoriteEntity> list = favoriteMapper.getAllFavorites(operatorNickname);
@@ -43,6 +45,7 @@ public class FavoriteServiceImpl implements IFavoriteService {
             SimpleDateFormat sdf = new SimpleDateFormat();
             sdf.applyPattern("yyyy-MM-dd HH:mm:ss");
             MyFavoriteItem myFavoriteItem = new MyFavoriteItem();
+            myFavoriteItem.setId(entity.getId());
             myFavoriteItem.setOperator(entity.getOperator());
             myFavoriteItem.setFavorite(entity.getFavorite());
             myFavoriteItem.setOperateDate(DateUtil.format(DateUtil.FORMAT_SECOND,entity.getOperateDate()));
