@@ -37,13 +37,12 @@ function insertUser() {
     var type = $("input[name='userType']:checked").val();
     var password1 = $("#register_password1").textbox('getValue');
     var password2 = $("#register_password2").textbox('getValue');
-    var sex = $("input[name='sex']:checked").val();
     var phone = $("#register_phone").textbox('getValue');
 
     $("#register_form").form("submit",{
-        url:"register_" + nickname + "_" + type + "_" + password1 + "_" + sex + "_" + phone,
+        url:"register_" + nickname + "_" + type + "_" + password1 + "_" + phone,
         onSubmit: function () {
-            if(nickname == "" || password1 =="" || password2 =="" || sex == "" || phone ==""){
+            if(nickname == "" || password1 =="" || password2 =="" || phone ==""){
                 $.messager.alert("温馨提示","请完善信息");
                 return false;
             }
@@ -65,5 +64,4 @@ function insertUser() {
             }
         }
     })
-
 }

@@ -1,4 +1,7 @@
-function openReserveWindow() {
+function openReserveWindow(pram) {
+    var nickname = $(pram).attr("data-value");
+    $("#passive_nickname").textbox('setValue',nickname);
+    console.log(nickname+"##");
     $("#reserve_dialog_id").dialog('open');
 }
 
@@ -6,7 +9,7 @@ function insertReservation(){
 
     var theme = $("#work_theme").textbox('getValue');
     var contact = $("#reserve_phone").textbox('getValue');
-    var initiative= $("#initiative_nickname").textbox('getValue');
+    var initiative= document.getElementById("index_nickname_id").innerText;
     var passive= $("#passive_nickname").textbox('getValue');
     var time = $("#reserve_time").datebox('getValue');
     var content = $("#work_content").textbox('getValue');

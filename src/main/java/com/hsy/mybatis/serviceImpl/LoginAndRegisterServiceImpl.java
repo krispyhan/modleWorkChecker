@@ -15,15 +15,22 @@ public class LoginAndRegisterServiceImpl implements ILoginAndRegisterService {
     private ILoginAndRegisterMapper loginAndRegisterMapper;
 
     @Override
-    public void insertUser(String nickname, int type, String password, String sex, String phone) {
+    public void insertUser(String nickname, int type, String password, String phone) {
         RegisterBean bean = new RegisterBean();
         bean.setNickname(nickname);
         bean.setType(type);
         bean.setPassword(password);
         bean.setPhone(phone);
-        bean.setSex(sex);
 
         loginAndRegisterMapper.insertUser(bean);
+    }
+
+    @Override
+    public void insertUserInformation(String phone,String nickname) {
+        RegisterBean bean = new RegisterBean();
+        bean.setPhone(phone);
+        bean.setNickname(nickname);
+        loginAndRegisterMapper.insertUserInformation(bean);
     }
 
     @Override

@@ -12,6 +12,16 @@ public interface IReserveService {
 
     List<MyReserveItem> getMyReserveByNickName(String nickname);
 
+    List<MyReserveItem> getMyReserveByInitiative(String initiative);
+
     void confirmReserve(int id,int result);
+
+    int getCurrentUserNewReserveCount(String nickname);
+
+    int getCurrentUserAllReserveCount(String nickname);
+
+    int getCurrentUserAcceptedReserveCount(String nickname);
+
+    int getCurrentUserRefusedReserveCount(String nickname);
 
 }

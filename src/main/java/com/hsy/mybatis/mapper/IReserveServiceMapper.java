@@ -17,7 +17,21 @@ public interface IReserveServiceMapper {
     @Select("select * from reservation where passive = #{passive}")
     List<ReservationEntity> getAllReservation(String passive);
 
+    @Select("select * from reservation where initiative = #{initiative}")
+    List<ReservationEntity> getAllReservationForInitiative(String initiative);
+
     @Update("update reservation r set r.status = #{status} where id = #{id}")
     void confirmReserve(int id,int status);
 
+    @Select("select count(*) from reservation where passive = #{nickname} and status = 0 ")
+    int getCurrentUserNewReserveCount(String nickname);
+
+    @Select("select count(*) from reservation where passive = #{nickname} or initiative = #{nickname}")
+    int getCurrentUserAllReserveCount(String nickname);
+
+    @Select("select count(*) from reservation where status = 1 and (passive = #{nickname} or initiative = #{nickname})")
+    int getCurrentUserAcceptedReserveCount(String nickname);
+
+    @Select("select count(*) from reservation where status = 2 and (passive = #{nickname} or initiative = #{nickname})")
+    int getCurrentUserRefusedReserveCount(String nickname);
 }

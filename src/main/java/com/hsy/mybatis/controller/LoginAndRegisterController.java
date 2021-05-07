@@ -24,15 +24,15 @@ public class LoginAndRegisterController {
     @Autowired
     private IUserManageService userManageService;
 
-    @RequestMapping("/register_{nickname}_{type}_{password}_{sex}_{phone}")
+    @RequestMapping("/register_{nickname}_{type}_{password}_{phone}")
     public String registerUser(@PathVariable String nickname,@PathVariable int type,
-                                @PathVariable String password,@PathVariable String sex,
-                                @PathVariable String phone){
-        UserEntity userEntity = loginAndRegisterMapper.isExisted(phone);
+                                @PathVariable String password,@PathVariable String phone){
+        UserEntity userEntity = loginAndRegisterMapper.isExisted(phone,nickname);
         if(userEntity != null){
             return "isExisted";
         }
-        loginAndRegisterService.insertUser(nickname,type,password,sex,phone);
+        loginAndRegisterService.insertUser(nickname,type,password,phone);
+        loginAndRegisterService.insertUserInformation(phone,nickname);
         return "success";
     }
 
@@ -43,6 +43,7 @@ public class LoginAndRegisterController {
                             HttpSession session){
         if(loginAndRegisterService.checkUser(account,password,type)){
             session.setAttribute("user",userManageService.getUserByAccount(account));
+//            session.setAttribute("userinfo",userManageService.getUserInfoByAccount(account));
             return "success";
         }
         return "failure";
