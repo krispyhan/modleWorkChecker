@@ -1,86 +1,66 @@
-<html>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <%@ include file="/WEB-INF/jsp/common.jsp" %>
-
-    <title>About Me</title>
-
+    <title>详情</title>
     <link rel="stylesheet" href="css/self.css" />
+    <link rel="stylesheet" type="text/css" href="css/centre.css" />
     <script type="text/javascript" src="js/loginAndRegister.js"></script>
     <script type="text/javascript" src="js/guide.js"></script>
+    <script type="text/javascript" src="js/self.js"></script>
+
 </head>
-<body>
-            <div class="toppest"> <a onclick="openRegisterWindow()"> 注册</a>  <a> |</a>  <a onclick="openLoginWindow()">登录</a>  <a style="float: right;">联系我们</a></div>
+<body  class="pg_index">
+
+<div class="toppest"> <a > Hi!</a>  <a id="online_nickname_id"> |</a>  <a style="float: right;">联系我们</a><a style="float: right;" href="index.jsp" >返回首页</a> </div>
 
 
-            <div  class="main">
-                <ul>
-                    <a href="selfpage.jsp"><li class="btns">用户</li></a>
-                    <a href="index.jsp">  <li class="btns">首页</li>  </a>
-                    <li class="btns">记录</li>
+<div class="qing_bbs_topw cl">
 
-                </ul>
-
-                <h1>MODELS WORK CHECKER</h1>
-                <h2>Belongs to me</h2>
+</div>
+<div id="wp" class="wp">
 
 
-                <div class="self">
-                    <div class="selfhead">
-                        <div class="wrap">
-                            <h3>个人中心 Individual Center</h3>
-                            <input class="easyui-switchbutton" checked>
-                        </div>
+    <div class="wp cl">
+        <div class="mn">
+            <div class="fl bm">
+
+                <div class="bm bmw cl">
+                    <div class="bm_h cl">
+                        <a><h2 id="self_name_id" style="font-family: 黑体;font-size: xx-large"></h2></a>
                     </div>
+                    <div>
 
-                    <div class="selfcontent">
-                       <form>
-
-                         <ul>
-                            <li class="selfcontent-li">
-                                <h4 style="color:black;">我的封面</h4>
-                                <input class="easyui-filebox" style="width:180px">
-
-                                <img src="img/模板图片.jpg" alt="模板图片">
-                            </li >
-
-                            <li class="selfcontent-li">
-                                <h4> 我的性别 </h4>
-                                <select  name="mySex" style="width:170px;height:40px;">
-                                <option value="male">男</option>
-                                <option value="female">女</option>
-                                </select>
-                                <br/>
-                                <h4> 我的生日 </h4>
-                                <input name="myBirth" type="text" class="easyui-datebox"/>
-                                <br/>
-                                <h4 style="width:170px;height:40px;"> 我的联系方式 </h4>
-                                <input  type="text" name="myPhone" />
-                                <br/>
-                                <h4 style="width:170px;height:40px;"> 我的地域 </h4>
-                                <input  type="text" name="myLocation" />
-                            </li>
-
-
-
-                            <li class="selfcontent-li">
-                                <h4> 我想让大家知道的 </h4>
-                                  <textarea name="myInfo" rows="18" cols="20">
-                                    请写下关于自己的信息，有助于快速找到合适的合作伙伴。
-                                  </textarea>
-                            </li>
-                          </ul>
-                      </form>
+                        <table cellspacing="0" cellpadding="0" class="fl_tb">
+                            <tbody>
+                            <tr class="fl_row">
+                                <td class="fl_icn"> <img id="self_user_cover" src="img/模板图片.jpg" align="left" style=" width: 240px;height: 320px;" /></td>
+                                <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;"> </span><p style="font-size: large"> </p> </td>
+                                <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">用户类型</span><p id="self_user_type" style="font-size: large;width:120px;"></p> <br/> <span style="font-size: large;color: #3d3d3d;">用户生日</span><p id="self_user_birthday" style="font-size: large;width:120px;"></p> </td>
+                                <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;"> </span><p style="font-size: large"> </p> </td>
+                                <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">联系方式</span><p id="self_user_contact" style="font-size: large"></p> <br/> <span style="font-size: large;color: #3d3d3d;">用户性别</span><p id="self_user_sex" style="font-size: large"></p> </td>
+                                <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;"> </span><p style="font-size: large"> </p> </td>
+                                <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">地域信息</span><p id="self_user_location" style="font-size: large;width:120px;"></p> </td>
+                                <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">简单介绍</span><p id="self_user_intro" style="width: 410px;"></p> </td>
+                                <td class="fl_by">
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
-
-
                 </div>
 
 
+
             </div>
+        </div>
+    </div>
+</div>
 
 
 
-
+<%@ include file="/WEB-INF/jsp/foot.jsp"%>
 </body>
 </html>

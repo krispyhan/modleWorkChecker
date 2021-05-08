@@ -64,6 +64,12 @@ $(function () {
             $("#myReserveDetail_id").textbox('setValue',rowData.content);
         }
     });
+    $("#mySchedule_table").datagrid({
+        onDblClickRow : function (rowIndex, rowData) {
+            $("#myScheduleDetail_dialog").dialog("open");
+            $("#myScheduleDetail_id").textbox('setValue',rowData.content);
+        }
+    });
 });
 
 function openMyReserveWindow() {
@@ -100,7 +106,7 @@ function loadMyReserveTable() {
             {field:"initialNickname",title:"邀约人",width:40,align:"center"},
             {field:"contact",title:"联系方式",width:40,align:"center"},
             {field:"theme",title:"主题",width:40,align:"center"},
-            {field:"time",title:"邀约时间",width:40,align:"center"},
+            {field:"time",title:"工作时间",width:40,align:"center"},
             {field:"status",title:"状态",width:40,align:"center",sortable:true},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
                     if(row.status=="待处理"){
@@ -149,7 +155,7 @@ function loadMyReservationTable() {
             {field:"id",title:"id",width:10,align:"center",hidden:true},
             {field:"passiveNickname",title:"邀约对象",width:40,align:"center"},
             {field:"theme",title:"主题",width:40,align:"center"},
-            {field:"time",title:"邀约时间",width:40,align:"center"},
+            {field:"time",title:"工作时间",width:40,align:"center"},
             {field:"status",title:"状态",width:40,align:"center",sortable:true},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
 
@@ -286,4 +292,85 @@ function cancelFavorite(pram) {
             $.messager.alert("温馨提示","操作失败，请重试!");
         }
     });
+}
+
+function openMyScheduleWindow() {
+    $("#mySchedule_window").window('open');
+    $.post("centreManage/getCurrentUserType",{},function (res) {
+        if (res == 0){
+            loadMySchedulingTable();
+
+        }else if (res == 1){
+            loadMyScheduleTable();
+        }
+    });
+
+}
+
+function loadMyScheduleTable() {
+    var nickname = $("#centre_nickname_id").text().trim();
+
+    console.log(nickname+"#");
+    var MyScheduleDataOptions = {
+        fit : true,
+        border : true,
+        rownumbers : true,
+        singleSelect : true,
+        pagination : true,
+        pageSize : 4,
+        pageNumber : 1,
+        pageList : [ 4, 8, 12 ],
+        striped :true,
+        fitColumns : true,
+        columns:[[
+            {field:"id",title:"id",width:10,align:"center",hidden:true},
+            {field:"passive",title:"合作方",width:40,align:"center"},
+            {field:"theme",title:"工作主题",width:40,align:"center"},
+            {field:"time",title:"工作时间",width:40,align:"center"},
+        ]],
+        url : "schedule/getMyScheduleByInitiative_"+nickname,
+        method : "GET",
+        loadFilter : function(data) {
+            return {
+                "total" : data.state != 0 ? 0 : data.data.total,
+                "rows" : data.state != 0 ? [] : data.data.rows
+            }
+        }
+    };
+
+    $("#mySchedule_table").datagrid(MyScheduleDataOptions);
+}
+function loadMySchedulingTable() {
+    var nickname = $("#centre_nickname_id").text().trim();
+
+    console.log(nickname+"#");
+    var MySchedulingDataOptions = {
+        fit : true,
+        border : true,
+        rownumbers : true,
+        singleSelect : true,
+        pagination : true,
+        pageSize : 4,
+        pageNumber : 1,
+        pageList : [ 4, 8, 12 ],
+        striped :true,
+        fitColumns : true,
+        columns:[[
+            {field:"id",title:"id",width:10,align:"center",hidden:true},
+            {field:"initiative",title:"合作方",width:40,align:"center"},
+            {field:"contact",title:"联系方式",width:40,align:"center"},
+            {field:"theme",title:"工作主题",width:40,align:"center"},
+            {field:"time",title:"工作时间",width:40,align:"center"},
+        ]],
+        url : "schedule/getMyScheduleByPassive_"+nickname,
+        method : "GET",
+        loadFilter : function(data) {
+            return {
+                "total" : data.state != 0 ? 0 : data.data.total,
+                "rows" : data.state != 0 ? [] : data.data.rows
+            }
+        }
+    };
+
+    $("#mySchedule_table").datagrid(MySchedulingDataOptions);
 }

@@ -206,7 +206,7 @@ h3{
     border-bottom: 3px solid black;
     border-left: 5px solid black;
     width: 1209px;
-    height: 909px;
+    height: 735px;
 }
 .displayhead{
     float: left;
@@ -257,8 +257,6 @@ h3{
     transition: all .5s ease;
 
 }
-
-
 
 
 .shower{

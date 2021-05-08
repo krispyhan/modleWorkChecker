@@ -8,6 +8,7 @@
     <script type="text/javascript" src="js/loginAndRegister.js"></script>
     <script type="text/javascript" src="js/reserve.js"></script>
     <script type="text/javascript" src="js/guide.js"></script>
+    <script type="text/javascript" src="js/self.js"></script>
 </head>
 <body>
 <div class="toppest"> <a onclick="openRegisterWindow()" id="register_button_id"> 注册</a>  <a id="index_nickname_id"> |</a>  <a onclick="openLoginWindow()" id="login_button_id">登录</a>  <a onclick="openContactWindow()" style="float: right;">联系我们</a></div>
@@ -16,17 +17,17 @@
     <ul>
         <a href="centre.jsp"><li class="btns">个人中心</li></a>
         <a href="index.jsp">  <li class="btns">首页</li>  </a>
-        <li class="btns">搜索<input id="ss" class="easyui-searchbox" style="width:200px"
+<%--        <li class="btns">搜索<input id="ss" class="easyui-searchbox" style="width:200px"
                                   data-options="searcher:qq,prompt:'搜索内容···',menu:'#mm'"></input>
             <div id="mm" style="width:120px">
                 <div data-options="name:'all',iconCls:'icon-ok'">全部</div>
                 <div data-options="name:'models'">模特</div>
                 <div data-options="name:'consignors'">委托人</div>
-            </div></li>
+            </div></li>--%>
 
     </ul>
 
-    <h1>MODELS WORK CHECKER</h1>
+    <h1>模特工作预约小站 MODELS WORK CHECKER</h1>
 
 
     <div class=ranker>
@@ -41,7 +42,7 @@
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "银耳">收 藏</button><button style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "银耳" >工作预约</button>
                     <h3 style="color:#4169E1;">1</h3>
                     <h4>银耳</h4>
-                    <img src="img/Krispy.jpg" alt="银耳">
+                    <img src="img/Krispy.jpg" alt="银耳" onclick="javascript:location.href='selfpage.jsp';loadSelfPage(this);" data-value = "银耳" />
                 </li>
                 <li class="rankcontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "纯子">收 藏</button><button style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this) " data-value = "纯子">工作预约</button>
@@ -87,34 +88,34 @@
         <div class="consigncontent">
             <ul>
                 <li class="consigncontent-li">
-                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "银世摄影">收 藏</button>
+                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "银世摄影HR">收 藏</button>
                     <h3 style="color:#4169E1;">1</h3>
                     <h4>银世摄影</h4>
                     <img src="img/银世摄影.jpg" alt="银世摄影">
                 </li>
                 <li class="consigncontent-li">
-                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "春之拍">收 藏</button>
+                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "春之拍HR">收 藏</button>
                     <h3 style="color:#6A5ACD;">2</h3>
                     <h4>春之拍</h4>
 
                     <img src="img/春之拍.jpg" alt="春之拍">
                 </li>
                 <li class="consigncontent-li">
-                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "彩谐文化">收 藏</button>
+                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "彩谐文化HR">收 藏</button>
                     <h3 style="color:#4682B4;">3</h3>
                     <h4>彩谐文化</h4>
 
                     <img src="img/彩谐文化.jpg" alt="彩谐文化">
                 </li>
                 <li class="consigncontent-li">
-                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "希芽布艺">收 藏</button>
+                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "希芽布艺HR">收 藏</button>
                     <h3 style="color:	#7B68EE;">4</h3>
                     <h4>希芽布艺</h4>
 
                     <img src="img/希芽布艺.jpg" alt="希芽布艺">
                 </li>
                 <li class="consigncontent-li">
-                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "月累设计">收 藏</button>
+                    <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "月累设计HR">收 藏</button>
                     <h3 style="color:	#9370D8;">5</h3>
                     <h4>月累设计</h4>
 
@@ -139,303 +140,243 @@
             <ul>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Ash</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Ash">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Ash">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Ash.jpeg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Belle</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Belle">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Belle">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Belle.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Charm</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Charm">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Charm">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Charm.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Cloe</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Cloe">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Cloe">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Cloe.jpeg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Mike</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Mike">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Mike">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Mike.jpeg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Molly</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Molly">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Molly">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Molly.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Nacy</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Nacy">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Nacy">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Nancy.jpeg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Tizzy</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Tizzy">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Tizzy">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Tizzy.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>Zack</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Zack">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Zack">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/Zack.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>中条彩未</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "中条彩未">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "中条彩未">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/中条彩未.jpeg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>任烨</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "任烨">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "任烨">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/任烨.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>到现</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "到现">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "到现">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/到现.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>坂口</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "坂口">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "坂口">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/坂口.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>均相</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "均相">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "均相">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/均相.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>奥守</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "奥守">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "奥守">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/奥守.jpeg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>宋江</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "宋江">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "宋江">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/宋江.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>山崎</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "山崎">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "山崎">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/山崎.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>恩佑</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "恩佑">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "恩佑">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/恩佑.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>智源</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "智源">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "智源">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/智源.jpg" alt="">
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
+                    <h4>濑户花</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "濑户花">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "濑户花">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Krispy.jpg" alt="">
-                </li>
-
-                <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
-                    <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >收藏</a>
-                    </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >工作预约</a>
-                    </div>
-                    <img src="img/Krispy.jpg" alt="">
-                </li>
-
-                <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
-                    <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >收藏</a>
-                    </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >工作预约</a>
-                    </div>
-                    <img src="img/Krispy.jpg" alt="">
-                </li>
-
-                <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
-                    <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >收藏</a>
-                    </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >工作预约</a>
-                    </div>
-                    <img src="img/Krispy.jpg" alt="">
-                </li>
-
-                <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
-                    <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >收藏</a>
-                    </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >工作预约</a>
-                    </div>
-                    <img src="img/Krispy.jpg" alt="">
-                </li>
-
-                <li class="displaycontent-li">
-                    <h4>韩世莹</h4>
-                    <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >收藏</a>
-                    </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "">
-                        <a style="color: #FFFFFF;" >工作预约</a>
-                    </div>
-                    <img src="img/Krispy.jpg" alt="">
+                    <img src="img/濑户花.jpeg" alt="">
                 </li>
 
 
@@ -571,9 +512,10 @@
     </div>
     <div data-options="region:'south',border:false" style="text-align:center;padding:5px 0 0;">
         <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="addFavorite()" style="width:80px">收藏</a>
-        <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#login_dialog_id').dialog('close')" style="width:80px">取消</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#favorite_dialog_id').dialog('close')" style="width:80px">取消</a>
     </div>
 </div>
+
 
 </body>
 </html>

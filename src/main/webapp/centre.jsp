@@ -46,6 +46,9 @@
            <a><h2 id="centre_name_id" style="font-family: 黑体;font-size: xx-large"></h2></a>
        </div>
        <div>
+<%--           <div style="float: left">--%>
+<%--               <input class="easyui-filebox" style="width:200px;border-color: #3d3d3d">--%>
+<%--           </div>--%>
            <div>
                <button class="centre_edit_button" onclick="openEditInfoWindow()" >编辑信息</button>
            </div>
@@ -87,20 +90,25 @@
                         <tbody>
                         <tr>
                             <td valign="top" class="category_l2">
-                                <div class="subjectbox">
-                                    <h2 style="color:grey;font-size:large" onclick="openMyReserveWindow()">预约记录</h2>
-
-                                    <div></div>
+                            <div class="subjectbox">
+                                  <h2 style="color:grey;font-size:large"  onclick="openMyReserveWindow()">预约记录</h2>
 
 
-                               </div> </td>
+                               </div>
+                            </td>
                            <td valign="top" class="category_l3">
-                                 <div class="subjectbox">
-                                 <h2 style="color:grey;font-size:large" onclick="openMyFavoriteWindow()">我的收藏</h2>
+                                <div class="subjectbox">
+                                    <h2 style="color:grey;font-size:large" onclick="openMyFavoriteWindow()">我的收藏</h2>
 
-                                     <div></div>
+                                </div>
+                           </td>
+                            <td valign="top" class="category_l4">
+                                <div class="subjectbox">
+                                    <h2 style="color:grey;font-size:large" onclick="openMyScheduleWindow()">日程安排</h2>
 
-                                    </div> </td>
+                                </div>
+                            </td>
+
                           </tr>
       </tbody>
       </table>
@@ -133,6 +141,18 @@
      </table>
  </div>
 
+ <%--my schedule--%>
+ <div class="easyui-window" title="日程安排" id="mySchedule_window" data-options="conCls:'icon-save',closed:true,modal:true,collapsible:false,minimizable:false,maximizable:false,resizable:false" style="width:1000px;height:560px;padding:10px;">
+     <table id="mySchedule_table">
+
+     </table>
+ </div>
+
+ <div class="easyui-dialog" title="日程详情" id="myScheduleDetail_dialog" data-options="conCls:'icon-save',closed:true,modal:true,collapsible:false,minimizable:false,maximizable:false,resizable:false" style="width:360px;height:200px;padding:10px;">
+     <div style="padding: 10px;">
+         <input class="easyui-textbox" id="myScheduleDetail_id" data-options="type:'text',readonly:true,multiline:true" style="width:100%;height:150px;padding:12px"/>
+     </div>
+ </div>
 
 <%-- edit information--%>
  <div class="easyui-dialog" title="编辑信息" id="editInfo_dialog_id" style="width:350px;height:400px;padding:10px" data-options="closed:true, modal: true">
