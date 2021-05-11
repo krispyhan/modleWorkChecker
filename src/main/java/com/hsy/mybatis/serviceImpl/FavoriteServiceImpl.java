@@ -54,4 +54,9 @@ public class FavoriteServiceImpl implements IFavoriteService {
 
         return results;
     }
+
+    @Override
+    public int getCurrentUserFavorCount(String nickname) {
+        return favoriteMapper.getCurrentUserFavorCount(nickname);
+    }
 }

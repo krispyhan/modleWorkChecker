@@ -436,11 +436,11 @@
 
 
 <%--login--%>
-<div class="easyui-dialog" title="登录" id="login_dialog_id" style="width:350px;height:400px;padding:10px" data-options="closed:true, modal: true">
+<div class="easyui-dialog" title="登录" id="login_dialog_id" style="width:350px;height:350px;padding:10px" data-options="closed:true, modal: true">
     <div data-options="region:'center'" style="padding:10px;">
         <form id="login_form" method="post">
             <div style="padding: 10px;">
-                <input class="easyui-textbox" id="loginphone" name="loginphone" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone',prompt:'请输入账号（注册时使用的电话号码）'" style="width:100%;height:30px;padding:12px"/>
+                <input class="easyui-textbox" id="loginphone" name="loginphone" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone',prompt:'请输入账号（注册填写的电话号码）'" style="width:100%;height:30px;padding:12px"/>
             </div>
             <div style="padding: 10px;">
                 模特<input type="radio" name="usertype" value=0 checked="checked"/>
@@ -536,6 +536,7 @@
     </div>
     </form>
 </div>
+
 
 </body>
 </html>

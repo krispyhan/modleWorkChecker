@@ -2,6 +2,7 @@ package com.hsy.mybatis.controller;
 
 import com.hsy.mybatis.bean.DataGridResult;
 import com.hsy.mybatis.bean.MyFavoriteItem;
+import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.service.IFavoriteService;
 import com.hsy.mybatis.util.WebJsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
@@ -39,4 +41,12 @@ public class FavoriteController {
         return WebJsonResult.newSuccess(dataGridResult);
     }
 
+    @RequestMapping("/getCurrentUserFavorCount")
+    public int getCurrentUserFavorCount(HttpSession session){
+        UserEntity userEntity = (UserEntity) session.getAttribute("user");
+        String nickname = userEntity.getNickname();
+
+          return  favoriteService.getCurrentUserFavorCount(nickname);
+
+    }
 }

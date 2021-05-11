@@ -54,6 +54,10 @@ $(function () {
             $.post("reserve/getCurrentUserRefusedReserveCount",{},function (res) {
                 $("#centre_refusedReserve_count_id").text(res);
             });
+            $.post("favorite/getCurrentUserFavorCount",{},function (res) {
+                console.log(res+"#");
+                $("#centre_favor_count_id").text(res);
+            });
 
         }
     });

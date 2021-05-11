@@ -19,4 +19,7 @@ public interface IFavoriteMapper {
 
     @Select("select * from favorite where operator = #{operatorNickname}")
     List<FavoriteEntity> getAllFavorites(String operatorNickname);
+
+    @Select("select count(*) from favorite where favorite = #{nickname}")
+    int getCurrentUserFavorCount(String nickname);
 }

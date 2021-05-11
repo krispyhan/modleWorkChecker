@@ -11,4 +11,6 @@ public interface IFavoriteService {
     void cancelFavorite(int id);
 
     List<MyFavoriteItem> getMyFavoriteByNickName(String operatorNickname);
+
+    int  getCurrentUserFavorCount(String nickname);
 }

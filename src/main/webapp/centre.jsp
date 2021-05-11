@@ -26,10 +26,11 @@
     <div class="z"> 
      <div id="chart"> 
       <p class="chart z">
-      	新消息数: <em id="centre_newReserve_count_id"></em><span class="pipe">|</span>
-      	总消息数: <em  id="centre_allReserve_count_id"></em><span class="pipe">|</span>
-      	被接受的预约数: <em  id="centre_acceptedReserve_count_id"></em><span class="pipe">|</span>
-        被拒绝的预约数: <em  id="centre_refusedReserve_count_id"></em><span class="pipe">|</span>
+      	新消息: <em id="centre_newReserve_count_id"></em><span class="pipe">|</span>
+      	总消息: <em  id="centre_allReserve_count_id"></em><span class="pipe">|</span>
+      	接受的预约: <em  id="centre_acceptedReserve_count_id"></em><span class="pipe">|</span>
+        拒绝的预约: <em  id="centre_refusedReserve_count_id"></em><span class="pipe">|</span>
+        收藏我的：<em  id="centre_favor_count_id"></em>
       </p> 
      </div> 
     </div>
