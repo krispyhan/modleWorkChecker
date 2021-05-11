@@ -33,6 +33,11 @@ public class UserManageServiceImpl implements IUserManageService {
     }
 
     @Override
+    public UserInfoEntity getUserInfoByNickname(String nickname) {
+        return userMapper.getUserInfoByNickname(nickname);
+    }
+
+    @Override
     public void editUserInformation(String location, String sex, Date birthday, String introduction, String account){
         UserInfoBean userInfoBean = new UserInfoBean();
         userInfoBean.setAccount(account);

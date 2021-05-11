@@ -14,4 +14,7 @@ public interface IScheduleMapper {
 
     @Select("select * from reservation where passive = #{nickname} and status = 1")
     List<ScheduleEntity> getMyScheduleByPassive(String nickname);
+
+    @Select("select * from reservation where id= #{id}")
+    ScheduleEntity getScheduleDetail(int id);
 }

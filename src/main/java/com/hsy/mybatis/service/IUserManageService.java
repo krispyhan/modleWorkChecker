@@ -11,5 +11,7 @@ public interface IUserManageService {
 
     UserInfoEntity getUserInfoByAccount(String account);
 
+    UserInfoEntity getUserInfoByNickname(String nickname);
+
     void editUserInformation(String location, String sex, Date birthday, String introduction,String account);
 }

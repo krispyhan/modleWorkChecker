@@ -42,35 +42,35 @@
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "银耳">收 藏</button><button style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "银耳" >工作预约</button>
                     <h3 style="color:#4169E1;">1</h3>
                     <h4>银耳</h4>
-                    <img src="img/Krispy.jpg" alt="银耳" onclick="javascript:location.href='selfpage.jsp';loadSelfPage(this);" data-value = "银耳" />
+                    <img src="img/Krispy.jpg" alt="银耳" onclick="openInformationWindow(this)" data-value = "银耳" />
                 </li>
                 <li class="rankcontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "纯子">收 藏</button><button style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this) " data-value = "纯子">工作预约</button>
                     <h3 style="color:#6A5ACD;">2</h3>
                     <h4>纯子</h4>
 
-                    <img src="img/Junko.JPG" alt="纯子">
+                    <img src="img/Junko.JPG" onclick="openInformationWindow(this)" data-value = "纯子"  alt="纯子">
                 </li>
                 <li class="rankcontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "七七蟹">收 藏</button><button style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this) " data-value = "七七蟹">工作预约</button>
                     <h3 style="color:#4682B4;">3</h3>
                     <h4>七七蟹</h4>
 
-                    <img src="img/Kim.jpg" alt="七七蟹">
+                    <img src="img/Kim.jpg" onclick="openInformationWindow(this)" data-value = "七七蟹" alt="七七蟹">
                 </li>
                 <li class="rankcontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "霞影">收 藏</button><button style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "霞影">工作预约</button>
                     <h3 style="color:	#7B68EE;">4</h3>
                     <h4>霞影</h4>
 
-                    <img src="img/Shia.jpg" alt="霞影">
+                    <img src="img/Shia.jpg" onclick="openInformationWindow(this)" data-value = "霞影" alt="霞影">
                 </li>
                 <li class="rankcontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Lay">收 藏</button><button style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Lay">工作预约</button>
                     <h3 style="color:	#9370D8;">5</h3>
                     <h4>Lay</h4>
 
-                    <img src="img/Lay.JPG" alt="Lay">
+                    <img src="img/Lay.JPG" onclick="openInformationWindow(this)" data-value = "Lay" alt="Lay">
                 </li>
 
             </ul>
@@ -91,35 +91,35 @@
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "银世摄影HR">收 藏</button>
                     <h3 style="color:#4169E1;">1</h3>
                     <h4>银世摄影</h4>
-                    <img src="img/银世摄影.jpg" alt="银世摄影">
+                    <img src="img/银世摄影.jpg" onclick="openInformationWindow(this)" data-value = "银世摄影HR" alt="银世摄影">
                 </li>
                 <li class="consigncontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "春之拍HR">收 藏</button>
                     <h3 style="color:#6A5ACD;">2</h3>
                     <h4>春之拍</h4>
 
-                    <img src="img/春之拍.jpg" alt="春之拍">
+                    <img src="img/春之拍.jpg" onclick="openInformationWindow(this)" data-value = "春之拍HR" alt="春之拍">
                 </li>
                 <li class="consigncontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "彩谐文化HR">收 藏</button>
                     <h3 style="color:#4682B4;">3</h3>
                     <h4>彩谐文化</h4>
 
-                    <img src="img/彩谐文化.jpg" alt="彩谐文化">
+                    <img src="img/彩谐文化.jpg" onclick="openInformationWindow(this)" data-value = "彩谐文化" alt="彩谐文化">
                 </li>
                 <li class="consigncontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "希芽布艺HR">收 藏</button>
                     <h3 style="color:	#7B68EE;">4</h3>
                     <h4>希芽布艺</h4>
 
-                    <img src="img/希芽布艺.jpg" alt="希芽布艺">
+                    <img src="img/希芽布艺.jpg" onclick="openInformationWindow(this)" data-value = "希芽布艺HR" alt="希芽布艺">
                 </li>
                 <li class="consigncontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "月累设计HR">收 藏</button>
                     <h3 style="color:	#9370D8;">5</h3>
                     <h4>月累设计</h4>
 
-                    <img src="img/月累设计.jpg" alt="月累设计">
+                    <img src="img/月累设计.jpg" onclick="openInformationWindow(this)" data-value = "月累设计HR" alt="月累设计">
                 </li>
 
             </ul>
@@ -148,7 +148,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Ash">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Ash.jpeg" alt="">
+                    <img src="img/Ash.jpeg" onclick="openInformationWindow(this)" data-value = "Ash" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -160,7 +160,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Belle">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Belle.jpg" alt="">
+                    <img src="img/Belle.jpg" onclick="openInformationWindow(this)" data-value = "Belle" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -172,7 +172,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Charm">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Charm.jpg" alt="">
+                    <img src="img/Charm.jpg" onclick="openInformationWindow(this)" data-value = "Charm" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -184,7 +184,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Cloe">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Cloe.jpeg" alt="">
+                    <img src="img/Cloe.jpeg" onclick="openInformationWindow(this)" data-value = "Cloe" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -196,7 +196,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Mike">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Mike.jpeg" alt="">
+                    <img src="img/Mike.jpeg" onclick="openInformationWindow(this)" data-value = "Mike" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -208,7 +208,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Molly">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Molly.jpg" alt="">
+                    <img src="img/Molly.jpg" onclick="openInformationWindow(this)" data-value = "Molly" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -220,7 +220,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Nacy">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Nancy.jpeg" alt="">
+                    <img src="img/Nancy.jpeg" onclick="openInformationWindow(this)" data-value = "Nancy" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -232,7 +232,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Tizzy">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Tizzy.jpg" alt="">
+                    <img src="img/Tizzy.jpg" onclick="openInformationWindow(this)" data-value = "Tizzy" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -244,7 +244,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Zack">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/Zack.jpg" alt="">
+                    <img src="img/Zack.jpg" onclick="openInformationWindow(this)" data-value = "Zack" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -256,7 +256,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "中条彩未">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/中条彩未.jpeg" alt="">
+                    <img src="img/中条彩未.jpeg" onclick="openInformationWindow(this)" data-value = "中条彩未" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -268,7 +268,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "任烨">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/任烨.jpg" alt="">
+                    <img src="img/任烨.jpg" onclick="openInformationWindow(this)" data-value = "任烨" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -280,7 +280,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "到现">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/到现.jpg" alt="">
+                    <img src="img/到现.jpg" onclick="openInformationWindow(this)" data-value = "到现" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -292,7 +292,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "坂口">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/坂口.jpg" alt="">
+                    <img src="img/坂口.jpg" onclick="openInformationWindow(this)" data-value = "坂口" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -304,7 +304,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "均相">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/均相.jpg" alt="">
+                    <img src="img/均相.jpg" onclick="openInformationWindow(this)" data-value = "均相" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -316,7 +316,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "奥守">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/奥守.jpeg" alt="">
+                    <img src="img/奥守.jpeg" onclick="openInformationWindow(this)" data-value = "奥守" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -328,7 +328,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "宋江">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/宋江.jpg" alt="">
+                    <img src="img/宋江.jpg"  onclick="openInformationWindow(this)" data-value = "宋江" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -340,7 +340,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "山崎">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/山崎.jpg" alt="">
+                    <img src="img/山崎.jpg"  onclick="openInformationWindow(this)" data-value = "山崎"  alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -352,7 +352,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "恩佑">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/恩佑.jpg" alt="">
+                    <img src="img/恩佑.jpg"  onclick="openInformationWindow(this)" data-value = "恩佑" alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -364,7 +364,7 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "智源">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/智源.jpg" alt="">
+                    <img src="img/智源.jpg"  onclick="openInformationWindow(this)" data-value = "智源"  alt="">
                 </li>
 
                 <li class="displaycontent-li">
@@ -376,9 +376,8 @@
                     <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "濑户花">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
-                    <img src="img/濑户花.jpeg" alt="">
+                    <img src="img/濑户花.jpeg"  onclick="openInformationWindow(this)" data-value = "濑户花" alt="">
                 </li>
-
 
             </ul>
         </div>
@@ -490,7 +489,7 @@
                 </div>
             </div>
             <div style="padding: 10px;">
-                <input class="easyui-textbox" id="work_content" name="work_content" data-options="type:'text',required:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-pencil',prompt:'请输入工作详情'" style="width:100%;height:80px;padding:10px"/>
+                <input class="easyui-textbox" id="work_content" name="work_content" data-options="type:'text',required:true,multiline:true,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-pencil',prompt:'请输入工作详情'" style="width:100%;height:80px;padding:10px"/>
             </div>
 
         </form>
@@ -516,6 +515,27 @@
     </div>
 </div>
 
+<%--user information--%>
+<div class="easyui-window" title="个人资料" id="information_window_id"  style="width:600px;height:400px" data-options="iconCls:'icon-save',closed:true,modal:true">
+
+    <form id="information_form" method="post">
+    <div style="padding: 10px;">
+        <input class="easyui-textbox" id="information_username_id" name="information_username" data-options="type:'text',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-man'" style="width:100%;height:30px;padding:12px"/>
+    </div>
+    <div style="padding: 10px;">
+        <input class="easyui-textbox" id="information_phone_id" name="information_phone" data-options="type:'text',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone'" style="width:100%;height:30px;padding:12px"/>
+    </div>
+    <div style="padding: 10px;">
+        <input class="easyui-textbox" id="information_birthday_id" name="information_birthday" data-options="type:'text',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-tip'" style="width:100%;height:30px;padding:12px"/>
+    </div>
+    <div style="padding: 10px;">
+        <input class="easyui-textbox" id="information_location_id" name="information_location" data-options="type:'text',alidateOnCreate:false,validateOnBlur:true,iconCls:'icon-room'" style="width:100%;height:30px;padding:12px"/>
+    </div>
+    <div style="padding: 10px;">
+        <input class="easyui-textbox" id="information_intro_id" name="information_intro" data-options="type:'text',validateOnCreate:false,multiline:true,validateOnBlur:true,iconCls:'icon-more'" style="width:100%;height:90px;padding:12px"/>
+    </div>
+    </form>
+</div>
 
 </body>
 </html>

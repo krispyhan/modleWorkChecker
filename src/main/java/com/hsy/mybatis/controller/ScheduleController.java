@@ -39,4 +39,10 @@ public class ScheduleController {
 
     }
 
+    @RequestMapping("/displayScheduleDetail_{id}")
+    public String displayScheduleDetail(@PathVariable int id){
+        String detail = scheduleService.getScheduleDetail(id).getContent();
+        return detail;
+    }
+
 }

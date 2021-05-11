@@ -54,4 +54,12 @@ public class ScheduleImpl implements IScheduleService {
 
         return results;
     }
+
+    @Override
+    public ScheduleEntity getScheduleDetail(int id) {
+
+        return scheduleMapper.getScheduleDetail(id);
+
+
+    }
 }

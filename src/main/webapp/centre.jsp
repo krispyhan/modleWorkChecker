@@ -110,6 +110,27 @@
                             </td>
 
                           </tr>
+                        <tr>
+                            <td valign="top" class="category_l2">
+                                <div >
+                                    <h3>在此可查看历史的预约消息</h3>
+
+                                </div>
+                            </td>
+                            <td valign="top" class="category_l3">
+                                <div >
+                                    <h3>在此可查看你收藏的用户</h3>
+
+                                </div>
+                            </td>
+                            <td valign="top" class="category_l4">
+                                <div >
+                                    <h3>在此可查看你的日程安排</h3>
+
+                                </div>
+                            </td>
+
+                        </tr>
       </tbody>
       </table>
   </div>

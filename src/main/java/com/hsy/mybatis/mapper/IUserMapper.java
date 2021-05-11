@@ -15,6 +15,9 @@ public interface IUserMapper {
     @Select("select * from information where account = #{account}")
     UserInfoEntity getUserInfo(String account);
 
+    @Select("select * from information where nickname = #{nickname}")
+    UserInfoEntity getUserInfoByNickname(String nickname);
+
     @Update("update information info set info.location = #{location},info.sex = #{sex},info.birthday = #{birthday},info.intro = #{introduction} where account = #{account}")
     void editUserInformation(UserInfoBean userInfobean);
 

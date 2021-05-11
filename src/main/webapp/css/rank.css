@@ -281,15 +281,15 @@ h3{
 }
 .showcontent{
     box-sizing: border-box;
-    width: 1000px;
-    height: 680px;
+    width: 500px;
+    height: 500px;
     float: left;
 }
 .showcontent ul li{
     box-sizing: border-box;
     float: left;
     width: 200px;
-    height: 180px;
+    height: 30px;
 }
 .showcontent-li{
     padding: 10px;
@@ -324,7 +324,7 @@ ul li{
     box-sizing: border-box;
     float: left;
     width: 200px;
-    height: 150px;
+    height: 60px;
 }
 ul li:nth-child(1),
 ul li:nth-child(2),

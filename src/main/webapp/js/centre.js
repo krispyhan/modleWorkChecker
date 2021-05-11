@@ -361,6 +361,14 @@ function loadMySchedulingTable() {
             {field:"contact",title:"联系方式",width:40,align:"center"},
             {field:"theme",title:"工作主题",width:40,align:"center"},
             {field:"time",title:"工作时间",width:40,align:"center"},
+            {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
+
+                    return "<a href='#' onclick='displayDetail(this)' data-id='"
+                        + row.id
+                        + "' >查看详情</a>";
+
+                }
+            }
         ]],
         url : "schedule/getMyScheduleByPassive_"+nickname,
         method : "GET",
@@ -374,3 +382,14 @@ function loadMySchedulingTable() {
 
     $("#mySchedule_table").datagrid(MySchedulingDataOptions);
 }
+function displayDetail(pram) {
+        var id = $(pram).attr("data-id");
+        $.post("schedule/displayScheduleDetail_" + id ,{},function (res) {
+            if(res == ""){
+                $.messager.alert("温馨提示","没有该数据");
+            }else {
+                $("#myScheduleDetail_dialog").dialog("open");
+                $("#myScheduleDetail_id").textbox('setValue',res);
+            }
+        });
+    }

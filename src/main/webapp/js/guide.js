@@ -58,4 +58,25 @@ function addFavorite(pram){
         }
     })
 }
+function openInformationWindow(pram) {
+    $("#information_window_id").dialog('open');
+    loadUserInformation(pram);
+}
+function loadUserInformation(pram){
+    var nickname = $(pram).attr("data-value");
+    $("#information_username_id").textbox('setValue',nickname);
+
+    $.post("selfManage/getUserPhone_" + nickname,{},function (res) {
+            $("#information_phone_id").textbox('setValue',res);
+    });
+    $.post("selfManage/getUserBirthday_" + nickname,{},function (res) {
+        $("#information_birthday_id").textbox('setValue',res);
+    });
+    $.post("selfManage/getUserLocation_" + nickname,{},function (res) {
+        $("#information_location_id").textbox('setValue',res);
+    });
+    $.post("selfManage/getUserIntroduction_" + nickname,{},function (res) {
+        $("#information_intro_id").textbox('setValue',res);
+    });
+}
 
