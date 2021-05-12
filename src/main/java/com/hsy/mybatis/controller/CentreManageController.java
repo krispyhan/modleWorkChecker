@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,6 +23,10 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/centreManage")
 public class CentreManageController {
+
+    private final static String IMG_PATH = "K:\\image\\";
+
+//    private final static String IMG_PATH = "K:\\Tool\\idea2020.1.3\\IntelliJ IDEA 2020.1.3\\workspace\\modleWorkChecker\\src\\main\\webapp\\img";
 
     @Autowired
     public IUserManageService userManageService;
@@ -126,6 +132,35 @@ public class CentreManageController {
                 bean.setBirthday(birthday);
             });
             return WebJsonResult.newSuccess(bean);
+        }
+    }
+
+    /**
+     * 处理图片显示请求
+     */
+    @RequestMapping("/getImage_{nickname}")
+    public void showPicture(@PathVariable String nickname,
+                            HttpServletResponse response){
+        final UserInfoEntity infoEntity = userManageService.getUserInfoByNickname(nickname);
+        File imgFile = new File(IMG_PATH + infoEntity.getCoverRef());
+        responseFile(response, imgFile);
+    }
+
+    /**
+     * 响应输出图片文件
+     * @param response
+     * @param imgFile
+     */
+    private void responseFile(HttpServletResponse response, File imgFile) {
+        try(InputStream is = new FileInputStream(imgFile);
+            OutputStream os = response.getOutputStream()){
+            byte [] buffer = new byte[1024]; // 图片文件流缓存池
+            while(is.read(buffer) != -1){
+                os.write(buffer);
+            }
+            os.flush();
+        } catch (IOException ioe){
+            ioe.printStackTrace();
         }
     }
 }

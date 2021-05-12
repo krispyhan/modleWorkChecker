@@ -105,7 +105,7 @@
                     <h3 style="color:#4682B4;">3</h3>
                     <h4>彩谐文化</h4>
 
-                    <img src="img/彩谐文化.jpg" onclick="openInformationWindow(this)" data-value = "彩谐文化" alt="彩谐文化">
+                    <img src="img/彩谐文化.jpg" onclick="openInformationWindow(this)" data-value = "彩谐文化HR" alt="彩谐文化">
                 </li>
                 <li class="consigncontent-li">
                     <button name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "希芽布艺HR">收 藏</button>

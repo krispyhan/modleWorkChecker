@@ -59,6 +59,10 @@ $(function () {
                 $("#centre_favor_count_id").text(res);
             });
 
+            /*$("#centre_user_cover").src = "centreManage/getImage_" + data;*/
+            var element = document.getElementById("centre_user_cover");
+            element.src = "centreManage/getImage_" + data;
+
         }
     });
 

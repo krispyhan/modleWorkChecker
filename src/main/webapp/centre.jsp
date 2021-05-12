@@ -57,7 +57,7 @@
         <table cellspacing="0" cellpadding="0" class="fl_tb"> 
          <tbody>
           <tr class="fl_row">
-           <td class="fl_icn"> <img id="centre_user_cover" src="img/模板图片.jpg" align="left" style=" width: 240px;height: 320px;" /></td>
+           <td class="fl_icn"> <img id="centre_user_cover" align="left" style=" width: 240px;height: 320px;" /></td>
               <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;"> </span><p style="font-size: large"> </p> </td>
               <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">用户类型</span><p id="centre_user_type" style="font-size: large;width:120px;"></p> <br/> <span style="font-size: large;color: #3d3d3d;">用户生日</span><p id="centre_user_birthday" style="font-size: large;width:120px;"></p> </td>
               <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;"> </span><p style="font-size: large"> </p> </td>
