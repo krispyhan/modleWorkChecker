@@ -212,12 +212,12 @@
                 </li>
 
                 <li class="displaycontent-li">
-                    <h4>Nacy</h4>
+                    <h4>Nancy</h4>
                     <br/>
-                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Nacy">
+                    <div class="a-wrap"  name="index_favorButton_name" style="background-color: #cc4125;visibility:hidden;" onclick="addFavorite(this)" data-value = "Nancy">
                         <a style="color: #FFFFFF;" >收藏</a>
                     </div>
-                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Nacy">
+                    <div class="a-wrap"  style="visibility:hidden" name="index_reserveButton_name" onclick="openReserveWindow(this)" data-value = "Nancy">
                         <a style="color: #FFFFFF;" >工作预约</a>
                     </div>
                     <img src="img/Nancy.jpeg" onclick="openInformationWindow(this)" data-value = "Nancy" alt="">

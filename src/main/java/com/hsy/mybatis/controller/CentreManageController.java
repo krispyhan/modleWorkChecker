@@ -10,7 +10,9 @@ import com.hsy.mybatis.util.WebJsonResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -19,6 +21,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/centreManage")
@@ -32,11 +35,18 @@ public class CentreManageController {
     public IUserManageService userManageService;
 
     @RequestMapping("/editInformation_{location}_{sex}_{birthday}_{introduction}_{currentAccount}")
-    public String editInformation(@PathVariable String location,@PathVariable String sex,@PathVariable String birthday,@PathVariable String introduction,@PathVariable String currentAccount) throws ParseException {
+    public String editInformation(@PathVariable String location,@PathVariable String sex,@PathVariable String birthday,@PathVariable String introduction,@PathVariable String currentAccount,@RequestParam("uploadCover") MultipartFile file,HttpSession session) throws ParseException, IOException {
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date birth = simpleDateFormat.parse(birthday);
-        userManageService.editUserInformation(location,sex,birth,introduction,currentAccount);
+        String coverRef = "";
+        if(file.isEmpty()){
+            UserInfoBean infoBean = (UserInfoBean)getUserInfo(session).getData();
+            coverRef = infoBean.getCoverRef();
+        }else {
+            coverRef = uploadPictures(file);
+        }
+        userManageService.editUserInformation(location,sex,birth,introduction,currentAccount,coverRef);
 
         return "success";
 
@@ -131,6 +141,7 @@ public class CentreManageController {
                 bean.setBirthdayStr(DateUtil.format(DateUtil.FORMAT_DATE,birthday));
                 bean.setBirthday(birthday);
             });
+            bean.setCoverRef(info.getCoverRef());
             return WebJsonResult.newSuccess(bean);
         }
     }
@@ -142,7 +153,13 @@ public class CentreManageController {
     public void showPicture(@PathVariable String nickname,
                             HttpServletResponse response){
         final UserInfoEntity infoEntity = userManageService.getUserInfoByNickname(nickname);
-        File imgFile = new File(IMG_PATH + infoEntity.getCoverRef());
+        String path = "";
+        if(infoEntity != null && infoEntity.getCoverRef() != null && !infoEntity.getCoverRef().equals("")){
+            path = infoEntity.getCoverRef();
+        }else {
+            path = "模板图片.jpg";
+        }
+        File imgFile = new File(IMG_PATH + path);
         responseFile(response, imgFile);
     }
 
@@ -162,5 +179,27 @@ public class CentreManageController {
         } catch (IOException ioe){
             ioe.printStackTrace();
         }
+    }
+
+    public String uploadPictures(MultipartFile file) throws IOException {
+        // 原始文件名
+        String originalFileName = file.getOriginalFilename();
+        if (originalFileName!=null && originalFileName .contains(".")) {
+            // 获取图片后缀
+            String suffix = originalFileName.substring(originalFileName.lastIndexOf("."));
+            // 生成图片存储的名称，UUID 避免相同图片名冲突，并加上图片后缀
+            String fileName = UUID.randomUUID().toString() + suffix;
+            // 图片存储路径
+            String filePath = IMG_PATH + fileName;
+            File targetDirectory = new File(IMG_PATH);
+            if(!targetDirectory.exists() && !targetDirectory.isDirectory()){
+                targetDirectory.mkdirs();
+            }
+
+            File saveFile = new File(filePath);
+            file.transferTo(saveFile);
+            return fileName;
+        }
+        return "";
     }
 }

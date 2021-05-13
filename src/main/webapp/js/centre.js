@@ -237,7 +237,7 @@ function editInfo(){
             if(res == "success"){
                 $("#editInfo_dialog_id").dialog('close');
                 $.messager.alert("温馨提示","信息编辑成功！");
-                location.reload();
+                history.go(0);
             }else{
                 $.messager.alert("温馨提示","信息编辑失败，请重试");
             }

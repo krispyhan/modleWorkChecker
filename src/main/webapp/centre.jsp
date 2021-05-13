@@ -179,13 +179,16 @@
 <%-- edit information--%>
  <div class="easyui-dialog" title="编辑信息" id="editInfo_dialog_id" style="width:350px;height:400px;padding:10px" data-options="closed:true, modal: true">
      <div data-options="region:'center'" style="padding:10px;">
-         <form id="editInfo_form" method="post">
+         <form id="editInfo_form" method="post" enctype="multipart/form-data">
              <div style="padding: 10px;">
                  <input class="easyui-textbox" id="centre_edit_location" name="centre_edit_location" data-options="type:'text',required:false,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-man',prompt:'输入您的地域信息'" style="width:100%;height:30px;padding:12px"/>
              </div>
              <div style="padding: 10px;">
                  男<input type="radio" name="centre_edit_sex" value="男" checked="checked"/>
                  女<input type="radio" name="centre_edit_sex" value="女" />
+             </div>
+             <div style="padding: 10px;">
+                 <input class="easyui-filebox" id="upload_cover_id"  name="uploadCover" data-options="prompt:'上传封面',accept: 'image/*'" style="width:80%;height:30px;padding:12px"/>
              </div>
              <div style="padding: 10px;">
                  <div>

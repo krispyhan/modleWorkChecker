@@ -38,14 +38,14 @@ public class UserManageServiceImpl implements IUserManageService {
     }
 
     @Override
-    public void editUserInformation(String location, String sex, Date birthday, String introduction, String account){
+    public void editUserInformation(String location, String sex, Date birthday, String introduction, String account,String coverRef){
         UserInfoBean userInfoBean = new UserInfoBean();
         userInfoBean.setAccount(account);
         userInfoBean.setLocation(location);
         userInfoBean.setSex(sex);
         userInfoBean.setBirthday(birthday);
         userInfoBean.setIntroduction(introduction);
-
+        userInfoBean.setCoverRef(coverRef);
         userMapper.editUserInformation(userInfoBean);
 
     }
