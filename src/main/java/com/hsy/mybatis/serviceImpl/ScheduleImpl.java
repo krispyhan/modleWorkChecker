@@ -30,6 +30,8 @@ public class ScheduleImpl implements IScheduleService {
             myScheduleItem.setPassive(entity.getPassive());
             myScheduleItem.setTheme(entity.getTheme());
             myScheduleItem.setTime(DateUtil.format(DateUtil.FORMAT_SECOND,entity.getTime()));
+            myScheduleItem.setId(entity.getId());
+            myScheduleItem.setContent(entity.getContent());
             results.add(myScheduleItem);
         }
 

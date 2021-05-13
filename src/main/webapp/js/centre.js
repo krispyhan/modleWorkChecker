@@ -55,7 +55,6 @@ $(function () {
                 $("#centre_refusedReserve_count_id").text(res);
             });
             $.post("favorite/getCurrentUserFavorCount",{},function (res) {
-                console.log(res+"#");
                 $("#centre_favor_count_id").text(res);
             });
 
@@ -166,7 +165,9 @@ function loadMyReservationTable() {
             {field:"time",title:"工作时间",width:40,align:"center"},
             {field:"status",title:"状态",width:40,align:"center",sortable:true},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
-
+                    return "<a href='#' onclick='displayDetail(this)' data-id='"
+                        + row.id
+                        + "' >查看详情</a>";
                 }
             }
         ]],
@@ -335,6 +336,14 @@ function loadMyScheduleTable() {
             {field:"passive",title:"合作方",width:40,align:"center"},
             {field:"theme",title:"工作主题",width:40,align:"center"},
             {field:"time",title:"工作时间",width:40,align:"center"},
+            {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
+
+                    return "<a href='#' onclick='displayDetail(this)' data-id='"
+                        + row.id
+                        + "' >查看详情</a>";
+
+                }
+            }
         ]],
         url : "schedule/getMyScheduleByInitiative_"+nickname,
         method : "GET",
@@ -400,4 +409,4 @@ function displayDetail(pram) {
                 $("#myScheduleDetail_id").textbox('setValue',res);
             }
         });
-    }
+}
