@@ -1,9 +1,8 @@
 package com.hsy.mybatis.serviceImpl;
 
 import com.hsy.mybatis.bean.MyFavoriteItem;
-import com.hsy.mybatis.entity.FavoriteEntity;
 import com.hsy.mybatis.mapper.IFavoriteMapper;
-import com.hsy.mybatis.mapper.IUserMapper;
+import com.hsy.mybatis.entity.FavoriteEntity;
 import com.hsy.mybatis.service.IFavoriteService;
 import com.hsy.mybatis.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,5 +57,10 @@ public class FavoriteServiceImpl implements IFavoriteService {
     @Override
     public int getCurrentUserFavorCount(String nickname) {
         return favoriteMapper.getCurrentUserFavorCount(nickname);
+    }
+
+    @Override
+    public int getCurrentUserFavoringCount(String nickname) {
+        return favoriteMapper.getCurrentUserFavoringCount(nickname);
     }
 }

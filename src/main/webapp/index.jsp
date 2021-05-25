@@ -8,7 +8,6 @@
     <script type="text/javascript" src="js/loginAndRegister.js"></script>
     <script type="text/javascript" src="js/reserve.js"></script>
     <script type="text/javascript" src="js/guide.js"></script>
-    <script type="text/javascript" src="js/self.js"></script>
 </head>
 <body>
 <div class="toppest"> <a onclick="openRegisterWindow()" id="register_button_id"> 注册</a>  <a id="index_nickname_id"> |</a>  <a onclick="openLoginWindow()" id="login_button_id">登录</a>  <a onclick="openContactWindow()" style="float: right;">联系我们</a></div>
@@ -436,7 +435,7 @@
 
 
 <%--login--%>
-<div class="easyui-dialog" title="登录" id="login_dialog_id" style="width:350px;height:350px;padding:10px" data-options="closed:true, modal: true">
+<div class="easyui-dialog" title="登录" id="login_dialog_id" style="width:350px;height:300px;padding:10px" data-options="closed:true, modal: true">
     <div data-options="region:'center'" style="padding:10px;">
         <form id="login_form" method="post">
             <div style="padding: 10px;">
@@ -445,6 +444,7 @@
             <div style="padding: 10px;">
                 模特<input type="radio" name="usertype" value=0 checked="checked"/>
                 委托人<input type="radio" name="usertype" value=1 />
+                管理员<input type="radio" name="usertype" value=2 />
             </div>
             <div style="padding: 10px;">
                 <input class="easyui-textbox" id="loginpassword" name="loginpassword" data-options="type:'password',required:true,validType:'password',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-lock',prompt:'请输入密码'" style="width:100%;height:30px;padding:12px"/>
@@ -522,6 +522,9 @@
     <div style="padding: 10px;">
         <input class="easyui-textbox" id="information_username_id" name="information_username" data-options="type:'text',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-man'" style="width:100%;height:30px;padding:12px"/>
     </div>
+    <div style="padding: 10px;">
+            <input class="easyui-textbox" id="information_certificate_id" name="information_certificate" data-options="type:'text',alidateOnCreate:false,validateOnBlur:true,iconCls:'icon-sum'" style="width:100%;height:30px;padding:12px"/>
+     </div>
     <div style="padding: 10px;">
         <input class="easyui-textbox" id="information_phone_id" name="information_phone" data-options="type:'text',validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone'" style="width:100%;height:30px;padding:12px"/>
     </div>

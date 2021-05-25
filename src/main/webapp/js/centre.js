@@ -17,6 +17,7 @@ $(function () {
                     $("#centre_user_sex").text(dataInfo.sex);
                     $("#centre_user_intro").text(dataInfo.introduction);
                     $("#centre_user_location").text(dataInfo.location);
+                    $("#centre_user_certificate").text(dataInfo.certificate);
                 }
             });
             // $.post("centreManage/getCurrentUserType",{},function (res) {
@@ -56,6 +57,12 @@ $(function () {
             });
             $.post("favorite/getCurrentUserFavorCount",{},function (res) {
                 $("#centre_favor_count_id").text(res);
+            });
+            $.post("favorite/getCurrentUserFavoringCount",{},function (res) {
+                $("#centre_favoring_count_id").text(res);
+            });
+            $.post("reserve/getCurrentUserAcceptedReserveCount",{},function (res) {
+                $("#centre_schedule_count_id").text(res);
             });
 
             /*$("#centre_user_cover").src = "centreManage/getImage_" + data;*/
@@ -103,9 +110,9 @@ function loadMyReserveTable() {
         rownumbers : true,
         singleSelect : true,
         pagination : true,
-        pageSize : 4,
+        pageSize : 5,
         pageNumber : 1,
-        pageList : [ 4, 8, 12 ],
+        pageList : [ 5, 10, 15 ],
         striped :true,
         fitColumns : true,
         columns:[[
@@ -153,9 +160,9 @@ function loadMyReservationTable() {
         rownumbers : true,
         singleSelect : true,
         pagination : true,
-        pageSize : 4,
+        pageSize : 5,
         pageNumber : 1,
-        pageList : [ 4, 8, 12 ],
+        pageList : [ 5, 10, 15 ],
         striped :true,
         fitColumns : true,
         columns:[[
@@ -261,9 +268,9 @@ function loadMyFavoriteTable() {
         rownumbers : true,
         singleSelect : true,
         pagination : true,
-        pageSize : 4,
+        pageSize : 8,
         pageNumber : 1,
-        pageList : [ 4, 8, 12 ],
+        pageList : [ 8, 16, 24 ],
         striped :true,
         fitColumns : true,
         columns:[[
@@ -326,9 +333,9 @@ function loadMyScheduleTable() {
         rownumbers : true,
         singleSelect : true,
         pagination : true,
-        pageSize : 4,
+        pageSize : 8,
         pageNumber : 1,
-        pageList : [ 4, 8, 12 ],
+        pageList : [ 8, 16, 24 ],
         striped :true,
         fitColumns : true,
         columns:[[

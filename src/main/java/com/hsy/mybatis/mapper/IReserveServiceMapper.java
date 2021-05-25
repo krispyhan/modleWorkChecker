@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import java.util.Date;
 import java.util.List;
 
 public interface IReserveServiceMapper {
@@ -34,4 +33,8 @@ public interface IReserveServiceMapper {
 
     @Select("select count(*) from reservation where status = 2 and (passive = #{nickname} or initiative = #{nickname})")
     int getCurrentUserRefusedReserveCount(String nickname);
+
+    @Select("select count(*) from reservation")
+    int getAllReserveCount();
+
 }

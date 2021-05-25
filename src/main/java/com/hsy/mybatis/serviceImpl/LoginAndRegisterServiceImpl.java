@@ -1,9 +1,9 @@
 package com.hsy.mybatis.serviceImpl;
 
-import com.hsy.mybatis.bean.LoginBean;
 import com.hsy.mybatis.bean.RegisterBean;
-import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.mapper.ILoginAndRegisterMapper;
+import com.hsy.mybatis.bean.LoginBean;
+import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.service.ILoginAndRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

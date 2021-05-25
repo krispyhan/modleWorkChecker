@@ -1,7 +1,7 @@
 package com.hsy.mybatis.controller;
 
-import com.hsy.mybatis.bean.DataGridResult;
 import com.hsy.mybatis.bean.MyFavoriteItem;
+import com.hsy.mybatis.bean.DataGridResult;
 import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.service.IFavoriteService;
 import com.hsy.mybatis.util.WebJsonResult;
@@ -47,6 +47,14 @@ public class FavoriteController {
         String nickname = userEntity.getNickname();
 
           return  favoriteService.getCurrentUserFavorCount(nickname);
-
     }
+
+    @RequestMapping("/getCurrentUserFavoringCount")
+    public int getCurrentUserFavoringCount(HttpSession session){
+        UserEntity userEntity = (UserEntity) session.getAttribute("user");
+        String nickname = userEntity.getNickname();
+
+        return  favoriteService.getCurrentUserFavoringCount(nickname);
+    }
+
 }

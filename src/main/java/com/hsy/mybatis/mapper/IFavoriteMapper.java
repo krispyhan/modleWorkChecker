@@ -2,7 +2,6 @@ package com.hsy.mybatis.mapper;
 
 import com.hsy.mybatis.bean.MyFavoriteItem;
 import com.hsy.mybatis.entity.FavoriteEntity;
-import com.hsy.mybatis.entity.UserInfoEntity;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
@@ -22,4 +21,7 @@ public interface IFavoriteMapper {
 
     @Select("select count(*) from favorite where favorite = #{nickname}")
     int getCurrentUserFavorCount(String nickname);
+
+    @Select("select count(*) from favorite where operator = #{nickname}")
+    int getCurrentUserFavoringCount(String nickname);
 }

@@ -21,6 +21,8 @@ public class UserInfoBean {
 
     private String introduction;
 
+    private String certificate;
+
     public String getAccount() {
         return account;
     }
@@ -91,5 +93,13 @@ public class UserInfoBean {
 
     public void setBirthdayStr(String birthdayStr) {
         this.birthdayStr = birthdayStr;
+    }
+
+    public String getCertificate() {
+        return certificate;
+    }
+
+    public void setCertificate(String certificate) {
+        this.certificate = certificate;
     }
 }

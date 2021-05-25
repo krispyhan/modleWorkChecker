@@ -1,7 +1,6 @@
 package com.hsy.mybatis.mapper;
 
 import com.hsy.mybatis.bean.LoginBean;
-import com.hsy.mybatis.bean.MyFavoriteItem;
 import com.hsy.mybatis.bean.RegisterBean;
 import com.hsy.mybatis.entity.UserEntity;
 import org.apache.ibatis.annotations.Insert;

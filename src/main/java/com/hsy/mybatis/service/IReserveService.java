@@ -24,4 +24,6 @@ public interface IReserveService {
 
     int getCurrentUserRefusedReserveCount(String nickname);
 
+    int getAllReserveCount();
+
 }

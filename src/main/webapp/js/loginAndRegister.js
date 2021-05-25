@@ -22,7 +22,13 @@ function attemptLogin()  {
        },
        success:function (res) {
            if(res=="success"){
-               window.location.href="centre.jsp";
+
+               if(usertype == "2"){
+                   window.location.href="selfpage.jsp";
+               }
+               else{
+                   window.location.href="centre.jsp";
+               }
            }else{
                $.messager.alert("温馨提示","账号或密码错误!");
            }

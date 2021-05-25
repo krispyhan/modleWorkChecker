@@ -1,9 +1,9 @@
 package com.hsy.mybatis.serviceImpl;
 
 
+import com.hsy.mybatis.entity.ReservationEntity;
 import com.hsy.mybatis.bean.MyReserveItem;
 import com.hsy.mybatis.bean.ReserveBean;
-import com.hsy.mybatis.entity.ReservationEntity;
 import com.hsy.mybatis.mapper.IReserveServiceMapper;
 import com.hsy.mybatis.service.IReserveService;
 import com.hsy.mybatis.util.DateUtil;
@@ -105,6 +105,11 @@ public class ReserveServiceImpl implements IReserveService {
     @Override
     public int getCurrentUserRefusedReserveCount(String nickname){
         return reserveServiceMapper.getCurrentUserRefusedReserveCount(nickname);
+    }
+
+    @Override
+    public int getAllReserveCount() {
+        return reserveServiceMapper.getAllReserveCount();
     }
 
 }

@@ -78,5 +78,13 @@ function loadUserInformation(pram){
     $.post("selfManage/getUserIntroduction_" + nickname,{},function (res) {
         $("#information_intro_id").textbox('setValue',res);
     });
+    $.post("selfManage/getUserCertificate_" + nickname,{},function (res) {
+        if (res == 0){
+            $("#information_certificate_id").textbox('setValue',"资质审核中");
+        }else if (res == 1){
+            $("#information_certificate_id").textbox('setValue',"资质审核通过");
+        }else if (res == 2){
+            $("#information_certificate_id").textbox('setValue',"资质审核退回");
+        }
+    });
 }
-

@@ -1,6 +1,5 @@
 package com.hsy.mybatis.service;
 
-import com.hsy.mybatis.bean.MyFavoriteItem;
 import com.hsy.mybatis.bean.MyScheduleItem;
 import com.hsy.mybatis.entity.ScheduleEntity;
 

@@ -3,7 +3,6 @@ package com.hsy.mybatis.controller;
 
 import com.hsy.mybatis.bean.DataGridResult;
 import com.hsy.mybatis.bean.MyReserveItem;
-import com.hsy.mybatis.entity.ReservationEntity;
 import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.service.IReserveService;
 import com.hsy.mybatis.util.WebJsonResult;
@@ -103,5 +102,10 @@ public class ReserveController {
             return reserveService.getCurrentUserRefusedReserveCount(nickname);
         }
         return 0;
+    }
+
+    @RequestMapping("/getAllReserveCount")
+    public int getAllReserveCount(){
+            return reserveService.getAllReserveCount();
     }
 }

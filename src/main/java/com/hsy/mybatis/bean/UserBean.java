@@ -1,8 +1,7 @@
-package com.hsy.mybatis.entity;
+package com.hsy.mybatis.bean;
 
-import java.util.Date;
+public class UserBean {
 
-public class UserEntity {
     private int id;
 
     private String account;
@@ -12,6 +11,7 @@ public class UserEntity {
     private String nickname;
 
     private int type;
+
 
     public int getId() {
         return id;
@@ -52,5 +52,4 @@ public class UserEntity {
     public void setType(int type) {
         this.type = type;
     }
-
 }

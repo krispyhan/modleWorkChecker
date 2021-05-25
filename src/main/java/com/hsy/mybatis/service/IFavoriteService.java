@@ -13,4 +13,6 @@ public interface IFavoriteService {
     List<MyFavoriteItem> getMyFavoriteByNickName(String operatorNickname);
 
     int  getCurrentUserFavorCount(String nickname);
+
+    int  getCurrentUserFavoringCount(String nickname);
 }

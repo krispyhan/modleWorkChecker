@@ -30,7 +30,9 @@
       	总消息: <em  id="centre_allReserve_count_id"></em><span class="pipe">|</span>
       	接受的预约: <em  id="centre_acceptedReserve_count_id"></em><span class="pipe">|</span>
         拒绝的预约: <em  id="centre_refusedReserve_count_id"></em><span class="pipe">|</span>
-        收藏我的：<em  id="centre_favor_count_id"></em>
+        收藏我的：<em  id="centre_favor_count_id"></em><span class="pipe">|</span>
+        我收藏的：<em  id="centre_favoring_count_id"></em><span class="pipe">|</span>
+        我的日程：<em  id="centre_schedule_count_id"></em><span class="pipe">|</span>
       </p> 
      </div> 
     </div>
@@ -58,7 +60,8 @@
          <tbody>
           <tr class="fl_row">
            <td class="fl_icn"> <img id="centre_user_cover" align="left" style=" width: 240px;height: 320px;" /></td>
-              <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;"> </span><p style="font-size: large"> </p> </td>
+
+              <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">资质情况</span><p id="centre_user_certificate"  style="font-size: large;width:120px;"> </p> </td>
               <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">用户类型</span><p id="centre_user_type" style="font-size: large;width:120px;"></p> <br/> <span style="font-size: large;color: #3d3d3d;">用户生日</span><p id="centre_user_birthday" style="font-size: large;width:120px;"></p> </td>
               <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;"> </span><p style="font-size: large"> </p> </td>
               <td class="fl_i"> <span style="font-size: large;color: #3d3d3d;">联系方式</span><p id="centre_user_contact" style="font-size: large"></p> <br/> <span style="font-size: large;color: #3d3d3d;">用户性别</span><p id="centre_user_sex" style="font-size: large"></p> </td>
@@ -177,11 +180,11 @@
  </div>
 
 <%-- edit information--%>
- <div class="easyui-dialog" title="编辑信息" id="editInfo_dialog_id" style="width:350px;height:400px;padding:10px" data-options="closed:true, modal: true">
+ <div class="easyui-dialog" title="编辑信息" id="editInfo_dialog_id" style="width:450px;height:570px;padding:10px" data-options="closed:true, modal: true">
      <div data-options="region:'center'" style="padding:10px;">
          <form id="editInfo_form" method="post" enctype="multipart/form-data">
              <div style="padding: 10px;">
-                 <input class="easyui-textbox" id="centre_edit_location" name="centre_edit_location" data-options="type:'text',required:false,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-man',prompt:'输入您的地域信息'" style="width:100%;height:30px;padding:12px"/>
+                 <input class="easyui-textbox" id="centre_edit_location" name="centre_edit_location" data-options="type:'text',required:false,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-edit_add',prompt:'输入您的地域信息'" style="width:100%;height:30px;padding:12px"/>
              </div>
              <div style="padding: 10px;">
                  男<input type="radio" name="centre_edit_sex" value="男" checked="checked"/>
@@ -191,13 +194,16 @@
                  <input class="easyui-filebox" id="upload_cover_id"  name="uploadCover" data-options="prompt:'上传封面',accept: 'image/*'" style="width:80%;height:30px;padding:12px"/>
              </div>
              <div style="padding: 10px;">
+                 <input class="easyui-filebox" id="upload_certificate_id"  name="uploadCertificate" data-options="prompt:'上传资质文件',accept: 'file/*'" style="width:80%;height:30px;padding:12px"/>
+             </div>
+             <div style="padding: 10px;">
                  <div>
                      生日<input class="easyui-datebox"  id="centre_edit_birthday" name="centre_edit_birthday"
                                 data-options="required:false,showSeconds:false" style="width:150px">
                  </div>
              </div>
              <div style="padding: 10px;">
-                 <input class="easyui-textbox" id="centre_edit_introduction" name="centre_edit_introduction" data-options="type:'text',multiline:true,required:false,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-phone',prompt:'介绍一下自己吧'" style="width:100%;height:150px;padding:12px"/>
+                 <input class="easyui-textbox" id="centre_edit_introduction" name="centre_edit_introduction" data-options="type:'text',multiline:true,required:false,validateOnCreate:false,validateOnBlur:true,iconCls:'icon-filter',prompt:'介绍一下自己吧'" style="width:100%;height:150px;padding:12px"/>
              </div>
          </form>
      </div>
@@ -206,6 +212,8 @@
          <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#editInfo_dialog_id').dialog('close')" style="width:80px">取消</a>
      </div>
  </div>
+
+
 
 
 <%@ include file="/WEB-INF/jsp/foot.jsp"%>

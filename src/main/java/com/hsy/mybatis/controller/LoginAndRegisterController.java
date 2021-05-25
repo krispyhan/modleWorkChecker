@@ -1,7 +1,7 @@
 package com.hsy.mybatis.controller;
 
-import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.mapper.ILoginAndRegisterMapper;
+import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.service.ILoginAndRegisterService;
 import com.hsy.mybatis.service.IUserManageService;
 import com.hsy.mybatis.util.WebJsonResult;

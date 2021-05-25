@@ -1,10 +1,9 @@
 package com.hsy.mybatis.controller;
 
 import com.hsy.mybatis.bean.DataGridResult;
-import com.hsy.mybatis.bean.MyFavoriteItem;
 import com.hsy.mybatis.bean.MyScheduleItem;
-import com.hsy.mybatis.service.IScheduleService;
 import com.hsy.mybatis.util.WebJsonResult;
+import com.hsy.mybatis.service.IScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

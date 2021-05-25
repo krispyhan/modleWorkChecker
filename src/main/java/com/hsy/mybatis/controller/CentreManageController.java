@@ -1,7 +1,6 @@
 package com.hsy.mybatis.controller;
 
 import com.hsy.mybatis.bean.UserInfoBean;
-import com.hsy.mybatis.entity.ReservationEntity;
 import com.hsy.mybatis.entity.UserEntity;
 import com.hsy.mybatis.entity.UserInfoEntity;
 import com.hsy.mybatis.service.IUserManageService;
@@ -132,10 +131,19 @@ public class CentreManageController {
                 bean.setType("模特");
             }else if(userEntity.getType() == 1){
                 bean.setType("委托人");
+            }else if(userEntity.getType() == 2){
+                bean.setType("管理员");
             }
             bean.setLocation(info.getLocation());
             bean.setSex(info.getSex());
             bean.setIntroduction(info.getIntro());
+            if(info.getCertificate() == 0){
+                bean.setCertificate("资质审核中");
+            }else if(info.getCertificate() == 1){
+                bean.setCertificate("资质审核通过");
+            }else if(info.getCertificate() == 2){
+                bean.setCertificate("资质审核退回");
+            }
             Optional.ofNullable(info.getBirthday()).ifPresent(i -> {
                 Date birthday = DateUtil.offset(DateUtil.FIELD_DATE,i,1);
                 bean.setBirthdayStr(DateUtil.format(DateUtil.FORMAT_DATE,birthday));

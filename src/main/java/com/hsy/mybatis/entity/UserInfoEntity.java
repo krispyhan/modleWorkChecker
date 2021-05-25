@@ -18,6 +18,8 @@ public class UserInfoEntity {
 
     private String intro;
 
+    private int certificate;
+
     public String getNickname() {
         return nickname;
     }
@@ -72,5 +74,13 @@ public class UserInfoEntity {
 
     public void setIntro(String intro) {
         this.intro = intro;
+    }
+
+    public int getCertificate() {
+        return certificate;
+    }
+
+    public void setCertificate(int certificate) {
+        this.certificate = certificate;
     }
 }
