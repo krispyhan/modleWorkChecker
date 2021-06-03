@@ -61,20 +61,22 @@ function loadModelExamineTable() {
             {field:"account",title:"联系方式",width:40,align:"center"},
             {field:"certificate",title:"审核状态",width:40,align:"center"},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
-                    return "<a href='#' onclick='' data-id='"
+                    if(row.certificate == "资质审核中"){
+                return "<a href='#' onclick='' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 0
-                        + "'>下载资质文件</a>  <a href='#' onclick='' data-id='"
+                        + "'>下载资质文件</a>  <a href='#' onclick='examineModel(this)' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 1
-                        + "'>资质通过</a>   <a href='#' onclick='' data-id='"
+                        + "'>资质通过</a>   <a href='#' onclick='examineModel(this)' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 2
                         + "'>资质退回</a>";
                 }
+            }
             }
         ]],
         url : "selfManage/getModels",
@@ -115,20 +117,22 @@ function loadConsignorExamineTable() {
             {field:"account",title:"联系方式",width:40,align:"center"},
             {field:"certificate",title:"审核状态",width:40,align:"center"},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
-                    return "<a href='#' onclick='' data-id='"
+                    if(row.certificate == "资质审核中"){
+                return "<a href='#' onclick='' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 0
-                        + "'>下载资质文件</a>  <a href='#' onclick='confirmExamine(this)' data-id='"
+                        + "'>下载资质文件</a>  <a href='#' onclick='examineConsignor(this)' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 1
-                        + "'>资质通过</a>   <a href='#' onclick='confirmExamine(this)' data-id='"
+                        + "'>资质通过</a>   <a href='#' onclick='examineConsignor(this)' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 2
                         + "'>资质退回</a>";
                 }
+            }
             }
         ]],
         url : "selfManage/getConsignors",
@@ -147,5 +151,29 @@ function logout() {
     $.post("logout",{},function (res) {
         location.href = "index.jsp";
         $.messager.alert("温馨提示",res.message);
+    });
+}
+function examineModel(pram) {
+    var id = $(pram).attr("data-id");
+    var decision = $(pram).attr("data-decision");
+    $.post("examine/confirmExamine_" + id + "_" + decision,{},function (res) {
+        if(res.state == 0){
+            $.messager.alert("温馨提示",res.message);
+            loadModelExamineTable();
+        }else {
+            $.messager.alert("温馨提示","操作失败，请重试!");
+        }
+    });
+}
+function examineConsignor(pram) {
+    var id = $(pram).attr("data-id");
+    var decision = $(pram).attr("data-decision");
+    $.post("examine/confirmExamine_" + id + "_" + decision,{},function (res) {
+        if(res.state == 0){
+            $.messager.alert("温馨提示",res.message);
+            loadConsignorExamineTable();
+        }else {
+            $.messager.alert("温馨提示","操作失败，请重试!");
+        }
     });
 }
