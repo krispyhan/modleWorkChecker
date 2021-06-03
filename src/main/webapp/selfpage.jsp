@@ -15,7 +15,7 @@
 </head>
 <body  class="pg_index">
 
-<div class="toppest"> <a > Hi!</a>  <a id="online_nickname_id"> |</a>  <a style="float: right;">联系我们</a><a style="float: right;" href="index.jsp" >返回首页</a> </div>
+<div class="toppest"> <a > Hi!</a>  <a id="online_nickname_id"> |</a><a>|</a> <a id="centre_logout_id" onclick="logout()"> 注销</a>  <a style="float: right;">联系我们</a><a style="float: right;" href="index.jsp" >返回首页</a> </div>
 
 
 <div class="qing_bbs_topw cl">

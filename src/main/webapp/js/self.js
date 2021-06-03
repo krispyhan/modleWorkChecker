@@ -50,15 +50,16 @@ function loadModelExamineTable() {
         rownumbers : true,
         singleSelect : true,
         pagination : true,
-        pageSize : 8,
+        pageSize : 14,
         pageNumber : 1,
-        pageList : [ 8, 16, 24 ],
+        pageList : [ 14, 28, 42 ],
         striped :true,
         fitColumns : true,
         columns:[[
             {field:"id",title:"id",width:10,align:"center",hidden:true},
             {field:"nickname",title:"用户昵称",width:40,align:"center"},
             {field:"account",title:"联系方式",width:40,align:"center"},
+            {field:"certificate",title:"审核状态",width:40,align:"center"},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
                     return "<a href='#' onclick='' data-id='"
                         + row.id
@@ -103,25 +104,26 @@ function loadConsignorExamineTable() {
         rownumbers : true,
         singleSelect : true,
         pagination : true,
-        pageSize : 8,
+        pageSize : 14,
         pageNumber : 1,
-        pageList : [ 8, 16, 24 ],
+        pageList : [ 14, 28, 42 ],
         striped :true,
         fitColumns : true,
         columns:[[
             {field:"id",title:"id",width:10,align:"center",hidden:true},
             {field:"nickname",title:"用户昵称",width:40,align:"center"},
             {field:"account",title:"联系方式",width:40,align:"center"},
+            {field:"certificate",title:"审核状态",width:40,align:"center"},
             {field: "action1", title: "操作", width: 40, align: "center", formatter: function (value, row, index) {
                     return "<a href='#' onclick='' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 0
-                        + "'>下载资质文件</a>  <a href='#' onclick='' data-id='"
+                        + "'>下载资质文件</a>  <a href='#' onclick='confirmExamine(this)' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 1
-                        + "'>资质通过</a>   <a href='#' onclick='' data-id='"
+                        + "'>资质通过</a>   <a href='#' onclick='confirmExamine(this)' data-id='"
                         + row.id
                         + "' data-decision='"
                         + 2
@@ -140,4 +142,10 @@ function loadConsignorExamineTable() {
     };
 
     $("#consignor_examine_table").datagrid(ConsignorExamineListDataOptions);
+}
+function logout() {
+    $.post("logout",{},function (res) {
+        location.href = "index.jsp";
+        $.messager.alert("温馨提示",res.message);
+    });
 }

@@ -13,6 +13,8 @@ public class UserInfoBean {
 
     private String coverRef;
 
+    private String certificateRef;
+
     private Date birthday;
 
     private String birthdayStr;
@@ -101,5 +103,13 @@ public class UserInfoBean {
 
     public void setCertificate(String certificate) {
         this.certificate = certificate;
+    }
+
+    public String getCertificateRef() {
+        return certificateRef;
+    }
+
+    public void setCertificateRef(String certificateRef) {
+        this.certificateRef = certificateRef;
     }
 }

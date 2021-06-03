@@ -13,6 +13,8 @@ public class UserEntity {
 
     private int type;
 
+    private int certificate;
+
     public int getId() {
         return id;
     }
@@ -53,4 +55,11 @@ public class UserEntity {
         this.type = type;
     }
 
+    public int getCertificate() {
+        return certificate;
+    }
+
+    public void setCertificate(int certificate) {
+        this.certificate = certificate;
+    }
 }

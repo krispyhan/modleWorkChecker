@@ -12,6 +12,8 @@ public class UserBean {
 
     private int type;
 
+    private String certificate;
+
 
     public int getId() {
         return id;
@@ -51,5 +53,13 @@ public class UserBean {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getCertificate() {
+        return certificate;
+    }
+
+    public void setCertificate(String certificate) {
+        this.certificate = certificate;
     }
 }

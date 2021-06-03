@@ -76,6 +76,13 @@ public class UserManageServiceImpl implements IUserManageService {
             bean.setAccount(entity.getAccount());
             bean.setNickname(entity.getNickname());
             bean.setType(entity.getType());
+            if(entity.getCertificate() == 0){
+                bean.setCertificate("资质审核中");
+            }else if(entity.getCertificate() == 1){
+                bean.setCertificate("资质审核通过");
+            }else if(entity.getCertificate()== 2){
+                bean.setCertificate("资质审核退回");
+            }
             results.add(bean);
         }
         return results;
@@ -91,6 +98,13 @@ public class UserManageServiceImpl implements IUserManageService {
             bean.setAccount(entity.getAccount());
             bean.setNickname(entity.getNickname());
             bean.setType(entity.getType());
+            if(entity.getCertificate() == 0){
+                bean.setCertificate("资质审核中");
+            }else if(entity.getCertificate() == 1){
+                bean.setCertificate("资质审核通过");
+            }else if(entity.getCertificate()== 2){
+                bean.setCertificate("资质审核退回");
+            }
             results.add(bean);
         }
         return results;
